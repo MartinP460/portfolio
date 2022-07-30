@@ -1,6 +1,7 @@
 import { NextPage } from 'next'
 import { getAllProjectsData } from '../services/projectService'
 import { Project } from '../types/project'
+import SideNavigation from './../components/SideNavigation'
 
 interface IndexProps {
   projects: Project[]
@@ -8,11 +9,12 @@ interface IndexProps {
 
 const Index: NextPage<IndexProps> = ({ projects }) => {
   return (
-    <div>
-      {projects.map((project) => (
-        <h1 key={project.title}>{project.title}</h1>
-      ))}
-    </div>
+    <>
+      <SideNavigation />
+      <div className="max-w-5xl mx-auto px-5 lg:px-12">
+        <main className="w-full h-screen">Hello world!</main>
+      </div>
+    </>
   )
 }
 

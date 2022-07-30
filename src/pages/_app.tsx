@@ -1,7 +1,6 @@
 import { AppProps } from 'next/app'
 
-import 'normalize.css'
-import '../styles/global-styles.css'
+import '../styles/globals.css'
 
 const CustomApp = ({ Component, pageProps }: AppProps) => {
   return <Component {...pageProps} />

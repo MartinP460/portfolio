@@ -4,10 +4,6 @@ import matter from 'gray-matter'
 
 const projectsDirectory = join(process.cwd(), '/projects')
 
-const getPostSlugs = () => {
-  return fs.readdirSync(projectsDirectory)
-}
-
 const getProject = (slug: string, fields: string[] = []) => {
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = join(projectsDirectory, `${realSlug}.md`)
@@ -29,8 +25,14 @@ const getProject = (slug: string, fields: string[] = []) => {
   return items
 }
 
+export const getProjectsSlugs = () => {
+  return fs
+    .readdirSync(projectsDirectory)
+    .map((slug) => slug.replace(/\.md$/, ''))
+}
+
 export const getAllProjectsData = () => {
-  const slugs = getPostSlugs()
+  const slugs = getProjectsSlugs()
   const projects = slugs
     .map((slug) =>
       getProject(slug, [

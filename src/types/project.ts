@@ -5,4 +5,5 @@ export type Project = {
   liveUrl: string
   repoUrl: string
   priority: 1 | 2 | 3
+  content: string
 }

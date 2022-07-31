@@ -12,7 +12,7 @@ const SideNavigation = () => {
     'w-[calc((100vw_-_(1024px_-_40px))_/_2)] lg:w-[calc((100vw_-_(1024px_-_96px))_/_2)]'
 
   return (
-    <div
+    <nav
       className={`fixed h-screen hidden lg:flex flex-col gap-10 justify-center items-center ${sidebarWidth}`}
     >
       <a href="#about">
@@ -27,7 +27,7 @@ const SideNavigation = () => {
       <a href="#contact">
         <MailIcon className={sharedIconStyles} />
       </a>
-    </div>
+    </nav>
   )
 }
 

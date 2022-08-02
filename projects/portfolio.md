@@ -1,7 +1,12 @@
 ---
 title: 'Portfolio'
 intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
-coverImage: '/public/images/onsplash.jpg'
+tags:
+  - Next.js
+  - TailwindCSS
+  - Typescript
+slug: 'portfolio'
+coverImage: '/images/onsplash.jpg'
 liveUrl: 'https://onsplash.vercel.app/'
 repoUrl: 'https://github.com/MartinP460/portfolio/tree/main'
 priority: 2

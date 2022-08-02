@@ -27,7 +27,7 @@ const About = () => {
           <h3 className="font-bold uppercase whitespace-nowrap">About me</h3>
           <div className="w-full h-0.5 bg-gray-200 mx-8 rounded"></div>
         </div>
-        <div className="mt-4">
+        <div className="mt-4 text-gray-600">
           <p>
             Hi, my name is Martin and I am a {myAge()}-year-old who enjoys
             building clean and maintainable frontend projects. Lorem ipsum dolor

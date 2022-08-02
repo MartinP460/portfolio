@@ -1,6 +1,8 @@
 export type Project = {
   title: string
   intro: string
+  tags: string[]
+  slug: string
   coverImage: string
   liveUrl: string
   repoUrl: string

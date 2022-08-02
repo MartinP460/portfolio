@@ -1,7 +1,12 @@
 ---
 title: 'Onsplash'
-intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
-coverImage: '/public/images/onsplash.jpg'
+intro: 'Onsplash is a clone/recreation of the image-sharing platform Unsplash. In addition to replicating Unsplash’s iconic gallery design, Onsplash enables users to perform CRUD operations on their own and other’s images.'
+tags:
+  - Next.js
+  - GraphQL
+  - Typescript
+slug: 'onsplash'
+coverImage: '/images/onsplash.jpg'
 liveUrl: 'https://onsplash.vercel.app/'
 repoUrl: 'https://github.com/MartinP460/portfolio/tree/main'
 priority: 1

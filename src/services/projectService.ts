@@ -17,6 +17,10 @@ const getProject = (slug: string, fields: string[] = []) => {
       items[field] = data[field]
     }
 
+    if (field === 'slug') {
+      items[field] = realSlug
+    }
+
     if (field === 'content') {
       items[field] = content
     }
@@ -38,6 +42,8 @@ export const getAllProjectsData = () => {
       getProject(slug, [
         'title',
         'intro',
+        'tags',
+        'slug',
         'coverImage',
         'liveUrl',
         'repoUrl',
@@ -53,6 +59,8 @@ export const getProjectBySlug = (slug: string) => {
   return getProject(slug, [
     'title',
     'intro',
+    'tags',
+    'slug',
     'coverImage',
     'liveUrl',
     'repoUrl',

@@ -5,6 +5,7 @@ import SideNavigation from './../components/SideNavigation'
 import Header from '../components/Header'
 import About from '../components/About'
 import Projects from '../components/Projects'
+import Skillset from '../components/Skillset'
 
 interface IndexProps {
   projects: Project[]
@@ -19,6 +20,7 @@ const Index: NextPage<IndexProps> = ({ projects }) => {
           <Header />
           <About />
           <Projects projects={projects} />
+          <Skillset />
         </main>
       </div>
     </>

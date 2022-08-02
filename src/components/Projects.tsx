@@ -14,7 +14,7 @@ const Projects = ({
       </div>
       <ul className="flex flex-col gap-16 mt-16">
         {projects.map((project) => (
-          <Project project={project} />
+          <Project key={project.title} project={project} />
         ))}
       </ul>
     </section>

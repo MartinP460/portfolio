@@ -1,6 +1,6 @@
 const Skillset = () => {
   const skills = [
-    { title: 'languages', items: ['html', 'css', 'javascript (ES6)'] },
+    { title: 'languages', items: ['HTML', 'CSS', 'javascript (ES6)'] },
     { title: 'frontend technologies', items: ['react', 'next.js'] },
     { title: 'libraries', items: ['tailwindcss', 'graphql', 'redux (+ RTK)'] },
     { title: 'testing', items: ['cypress', 'jest', 'react testing library'] },

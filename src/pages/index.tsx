@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import About from '../components/About'
 import Projects from '../components/Projects'
 import Skillset from '../components/Skillset'
+import Contact from './../components/Contact'
 
 interface IndexProps {
   projects: Project[]
@@ -21,6 +22,7 @@ const Index: NextPage<IndexProps> = ({ projects }) => {
           <About />
           <Projects projects={projects} />
           <Skillset />
+          <Contact />
         </main>
       </div>
     </>

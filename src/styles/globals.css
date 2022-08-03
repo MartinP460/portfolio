@@ -3,3 +3,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom animations (which are hard to implement using inline Tailwind classnames) */
+
+.burger {
+  width: 40px;
+  height: 32px;
+}
+
+.burger:after,
+.burger:before {
+  background-color: #244a83;
+  border-radius: 2px;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.burger:after {
+  transform: scaleX(75%) translateX(6px);
+}
+
+.burger--active:before {
+  transform: translateY(10px) rotate(135deg);
+  background-color: white;
+  height: 3px;
+}
+
+.burger--active:after {
+  transform: translateY(0px) rotate(-135deg) scaleX(100%);
+  background-color: white;
+  height: 3px;
+}

@@ -2,7 +2,7 @@ import Button from './Button'
 
 const Header = () => {
   return (
-    <section className="flex flex-col justify-center min-h-screen">
+    <section className="flex flex-col justify-center min-h-[90vh]">
       <p className="font-semibold bg-clip-text text-transparent bg-gradient-to-br from-primary-800 to-primary-200">
         Hey - I&apos;m
       </p>

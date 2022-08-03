@@ -7,8 +7,8 @@ const Projects = ({
   projects: Omit<ProjectType, 'content'>[]
 }) => {
   return (
-    <section className="py-72" id="projects">
-      <div className="w-full flex items-center">
+    <section className="py-36 md:py-48">
+      <div className="w-full flex items-center" id="projects">
         <h3 className="font-bold uppercase whitespace-nowrap">Projects</h3>
         <div className="w-full h-0.5 bg-gray-200 mx-8 rounded max-w-md"></div>
       </div>

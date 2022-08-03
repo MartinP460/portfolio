@@ -9,7 +9,7 @@ const Skillset = () => {
   ]
 
   return (
-    <section className="py-48" id="skillset">
+    <section className="py-36 md:py-48" id="skillset">
       <div className="w-full flex items-center">
         <h3 className="font-bold uppercase whitespace-nowrap">Skillset</h3>
         <div className="w-full h-0.5 bg-gray-200 mx-8 rounded max-w-md"></div>

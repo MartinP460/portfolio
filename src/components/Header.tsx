@@ -1,6 +1,9 @@
 import Button from './Button'
+import { useRouter } from 'next/router'
 
 const Header = () => {
+  const router = useRouter()
+
   return (
     <section className="flex flex-col justify-center min-h-[90vh]">
       <p className="font-semibold bg-clip-text text-transparent bg-gradient-to-br from-primary-800 to-primary-200">
@@ -19,7 +22,9 @@ const Header = () => {
         real problems. I&apos;m looking for new gigs, so if you&apos;re
         interested in working with me, please get in touch.
       </p>
-      <Button className="mt-8">Projects</Button>
+      <Button className="mt-8" onClick={() => router.push('#projects')}>
+        Projects
+      </Button>
     </section>
   )
 }

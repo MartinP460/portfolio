@@ -37,7 +37,7 @@ const Project = ({ project }: { project: Omit<Project, 'content'> }) => {
 
   return (
     <li className="flex flex-col md:flex-row">
-      <div className="w-full order-1 mt-5 min-h-[14rem] flex-shrink-0 relative md:w-3/5 md:order-2">
+      <div className="w-full order-1 mt-5 min-h-[14rem] flex-shrink-0 relative md:w-3/5 md:order-2 md:mt-0">
         <NextLink href={slug}>
           <a>
             <Image

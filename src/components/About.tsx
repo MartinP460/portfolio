@@ -11,7 +11,7 @@ const About = () => {
 
   return (
     <section
-      className="py-28 flex flex-col w-full gap-x-8 md:flex-row items-center"
+      className="pt-28 pb-36 flex flex-col items-center w-full gap-x-8 md:pb-48 md:flex-row"
       id="about"
     >
       <div className="w-full">

@@ -16,10 +16,12 @@ const About = () => {
     >
       <div className="w-full">
         <div className="w-full flex items-center">
-          <h3 className="font-bold uppercase whitespace-nowrap">About me</h3>
+          <h3 className="font-bold uppercase whitespace-nowrap dark:text-white">
+            About me
+          </h3>
           <div className="w-full h-0.5 bg-gray-200 mx-8 rounded"></div>
         </div>
-        <div className="mt-4 text-gray-600">
+        <div className="mt-4 text-gray-600 dark:text-gray-400">
           <p>
             Hi, my name is Martin and I am a {myAge()}-year-old who enjoys
             building clean and maintainable frontend projects. Lorem ipsum dolor
@@ -42,7 +44,7 @@ const About = () => {
       </div>
       <div className="mt-8 max-w-xs pr-5">
         <div className="relative">
-          <div className="hover:translate-x-3 hover:translate-y-3 transition-transform">
+          <div className="hover:translate-x-3 hover:translate-y-3 transition-transform z-10 relative">
             <Image
               src="/images/thispersondoesnotexist.jpg"
               width={500}
@@ -50,7 +52,7 @@ const About = () => {
               className="rounded"
             />
           </div>
-          <GridPattern className="absolute w-full h-full top-0 mt-4 ml-6 -z-10" />
+          <GridPattern className="absolute w-full h-full top-0 mt-4 ml-6 from-primary-800 dark:from-white" />
         </div>
       </div>
     </section>

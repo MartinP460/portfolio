@@ -10,7 +10,7 @@ const DarkModeToggle = ({ className }: { className?: string }) => {
   return (
     <button
       className={clsx(
-        'relative w-12 h-12 items-center justify-center text-primary-800 transition-colors',
+        'relative w-12 h-12 items-center justify-center text-primary-800 transition-colors dark:text-white',
         className
       )}
       aria-label={label}
@@ -19,13 +19,13 @@ const DarkModeToggle = ({ className }: { className?: string }) => {
     >
       <SunIcon
         className={clsx(
-          'w-8 absolute hover:text-yellow-500 transition-colors',
+          'w-8 absolute hover:text-yellow-500 transition-all',
           isDark ? '' : 'invisible'
         )}
       />
       <MoonIcon
         className={clsx(
-          'w-8 absolute hover:text-blue-200 transition-colors',
+          'w-8 absolute hover:text-blue-200 transition-all',
           isDark ? 'invisible' : ''
         )}
       />

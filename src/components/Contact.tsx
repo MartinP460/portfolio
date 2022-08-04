@@ -8,11 +8,13 @@ const Contact = () => {
   return (
     <section className="py-36 md:py-48" id="contact">
       <div className="w-full flex items-center">
-        <h3 className="font-bold uppercase whitespace-nowrap">Contact</h3>
+        <h3 className="font-bold uppercase whitespace-nowrap dark:text-white">
+          Contact
+        </h3>
         <div className="w-full h-0.5 bg-gray-200 mx-8 rounded max-w-md"></div>
       </div>
       <div className="mt-12">
-        <p className="max-w-lg text-gray-600">
+        <p className="max-w-lg text-gray-600 dark:text-gray-400">
           I&apos;m looking for new opportunities and people to connect with so
           you&apos;re more than welcome to contact me! I&apos;m also active on a
           few different social media platforms, and you can find links to those
@@ -33,7 +35,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 title="Stackoverflow profile"
               >
-                <GithubIcon className="w-8 h-8" />
+                <GithubIcon className="w-8 h-8 dark:fill-white" />
               </a>
             </li>
             <li>

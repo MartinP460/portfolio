@@ -15,7 +15,7 @@ interface IndexProps {
 
 const Index: NextPage<IndexProps> = ({ projects }) => {
   return (
-    <>
+    <div className="dark:bg-primary-800">
       <SideNavigation />
       <main className="max-w-5xl mx-auto px-5 lg:px-12 w-full">
         <Navbar />
@@ -25,7 +25,7 @@ const Index: NextPage<IndexProps> = ({ projects }) => {
         <Skillset />
         <Contact />
       </main>
-    </>
+    </div>
   )
 }
 

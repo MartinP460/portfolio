@@ -65,13 +65,18 @@ const Project = ({ project }: { project: Omit<Project, 'content'> }) => {
       >
         <ul className="flex gap-6">
           {tags.map((tag) => (
-            <li key={tag} className="text-gray-600">
+            <li key={tag} className="text-gray-600 dark:text-gray-400">
               {tag}
             </li>
           ))}
         </ul>
-        <h4 className="font-light text-4xl mt-3 md:text-5xl">{title}</h4>
-        <p className="mt-4 text-gray-600" data-testid="intro-text">
+        <h4 className="font-light text-4xl mt-3 md:text-5xl dark:text-white">
+          {title}
+        </h4>
+        <p
+          className="mt-4 text-gray-600 dark:text-gray-400"
+          data-testid="intro-text"
+        >
           {intro}
         </p>
         <div className="h-full items-end hidden md:flex">

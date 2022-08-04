@@ -16,7 +16,7 @@ const Navbar = () => {
           type="button"
           onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
           className={clsx(
-            'burger sm:hidden z-30 outline-none',
+            'burger sm:hidden z-30 outline-none dark:before:bg-white dark:after:bg-white',
             sidebarIsOpen ? 'burger--active fixed mt-8' : ''
           )}
         ></button>

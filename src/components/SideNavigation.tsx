@@ -6,26 +6,28 @@ import {
 } from '@heroicons/react/outline'
 
 const SideNavigation = () => {
-  const sharedIconStyles = 'w-6 text-primary-800 hover:text-primary-700'
   // this calculates the width of the sidebar from what the margin and padding is in index.tsx
   const sidebarWidth =
     'w-[calc((100vw_-_(1024px_-_40px))_/_2)] lg:w-[calc((100vw_-_(1024px_-_96px))_/_2)]'
 
+  const iconStyles =
+    'w-6 hover:text-primary-700 dark:hover:text-primary-200 transition'
+
   return (
     <nav
-      className={`fixed h-screen hidden lg:flex flex-col gap-10 justify-center items-center ${sidebarWidth}`}
+      className={`fixed h-screen hidden lg:flex flex-col gap-10 justify-center items-center text-primary-800 dark:text-white ${sidebarWidth}`}
     >
       <a href="#about">
-        <UserIcon className={sharedIconStyles} />
+        <UserIcon className={iconStyles} />
       </a>
       <a href="#projects">
-        <AdjustmentsIcon className={sharedIconStyles} />
+        <AdjustmentsIcon className={iconStyles} />
       </a>
       <a href="#skillset">
-        <PuzzleIcon className={sharedIconStyles} />
+        <PuzzleIcon className={iconStyles} />
       </a>
       <a href="#contact">
-        <MailIcon className={sharedIconStyles} />
+        <MailIcon className={iconStyles} />
       </a>
     </nav>
   )

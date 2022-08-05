@@ -70,7 +70,7 @@ const Project = ({ project }: { project: Omit<Project, 'content'> }) => {
             </li>
           ))}
         </ul>
-        <h4 className="font-light text-4xl mt-3 md:text-5xl dark:text-white">
+        <h4 className="font-heading font-light text-4xl mt-3 md:text-5xl dark:text-white">
           {title}
         </h4>
         <p

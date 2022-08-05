@@ -16,7 +16,7 @@ const About = () => {
     >
       <div className="w-full">
         <div className="w-full flex items-center">
-          <h3 className="font-bold uppercase whitespace-nowrap dark:text-white">
+          <h3 className="font-heading text-lg tracking-widest font-bold uppercase whitespace-nowrap dark:text-white">
             About me
           </h3>
           <div className="w-full h-0.5 bg-gray-200 mx-8 rounded"></div>

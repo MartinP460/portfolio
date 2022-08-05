@@ -7,7 +7,8 @@ module.exports = {
   darkMode: 'class',
   theme: {
     fontFamily: {
-      sans: ['Inter', 'sans-serif']
+      sans: ['Inter', 'sans-serif'],
+      heading: ['Barlow', 'sans-serif']
     },
     extend: {
       colors: {

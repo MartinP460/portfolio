@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <section className="py-36 md:py-48" id="contact">
       <div className="w-full flex items-center">
-        <h3 className="font-bold uppercase whitespace-nowrap dark:text-white">
+        <h3 className="font-heading text-lg tracking-widest font-bold uppercase whitespace-nowrap dark:text-white">
           Contact
         </h3>
         <div className="w-full h-0.5 bg-gray-200 mx-8 rounded max-w-md"></div>

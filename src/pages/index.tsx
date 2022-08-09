@@ -1,8 +1,7 @@
 import { NextPage } from 'next'
 import { getAllProjectsData } from '../services/projectService'
 import { Project } from '../types/project'
-import SideNavigation from './../components/SideNavigation'
-import Navbar from '../components/Navbar'
+import Layout from '../components/Layout'
 import Header from '../components/Header'
 import About from '../components/About'
 import Projects from '../components/Projects'
@@ -15,17 +14,13 @@ interface IndexProps {
 
 const Index: NextPage<IndexProps> = ({ projects }) => {
   return (
-    <div className="dark:bg-primary-800">
-      <SideNavigation />
-      <main className="max-w-5xl mx-auto px-5 lg:px-12 w-full">
-        <Navbar />
-        <Header />
-        <About />
-        <Projects projects={projects} />
-        <Skillset />
-        <Contact />
-      </main>
-    </div>
+    <Layout sideNavigation>
+      <Header />
+      <About />
+      <Projects projects={projects} />
+      <Skillset />
+      <Contact />
+    </Layout>
   )
 }
 

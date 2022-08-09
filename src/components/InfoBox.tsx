@@ -11,7 +11,7 @@ const InfoBox = ({ title, children, className }: InfoBoxProps) => {
   return (
     <div
       className={clsx(
-        'flex items-center border-2 border-black gap-5 rounded py-3 px-6 sm:pr-16 sm:pl-8',
+        'flex items-center border-2 border-black gap-5 rounded py-3 px-6 sm:pr-16 sm:pl-8 dark:border-white',
         className
       )}
     >

@@ -1,5 +1,6 @@
-import Button from './Button'
 import { useRouter } from 'next/router'
+import Button from './Button'
+import Highlight from './Highlight'
 
 const Header = () => {
   const router = useRouter()
@@ -17,12 +18,10 @@ const Header = () => {
       </h2>
       <p className="text-gray-600 mt-8 max-w-2xl dark:text-gray-400">
         I&apos;m a passionate front-end developer from{' '}
-        <span className="font-semibold bg-clip-text text-transparent bg-gradient-to-br from-primary-800 to-primary-500 dark:from-primary-500 dark:to-primary-200">
-          Copenhagen, Denmark
-        </span>
-        . I love working in React and Next.js to build applications that solve
-        real problems. I&apos;m looking for new gigs, so if you&apos;re
-        interested in working with me, please get in touch.
+        <Highlight text="Copenhagen, Denmark" />. I love working in React and
+        Next.js to build applications that solve real problems. I&apos;m looking
+        for new gigs, so if you&apos;re interested in working with me, please
+        get in touch.
       </p>
       <Button className="mt-8" onClick={() => router.push('#projects')}>
         Projects

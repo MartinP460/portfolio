@@ -4,7 +4,7 @@ import '../styles/globals.css'
 
 const CustomApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <div className="dark:bg-primary-800">
+    <div className="dark:bg-primary-800 transition-colors">
       <Component {...pageProps} />
     </div>
   )

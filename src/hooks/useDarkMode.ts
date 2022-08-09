@@ -1,15 +1,20 @@
 import usePrefersDarkMode from './usePrefersDarkMode'
 import useSafeLocalStorage from './useSafeLocalStorage'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 const useDarkMode = () => {
+  const [darkMode, setDarkMode] = useState()
   const prefersDarkMode = usePrefersDarkMode()
   const [isDarkMode, setIsDarkMode] = useSafeLocalStorage(
     'dark-mode',
     undefined
   )
 
-  const darkMode = isDarkMode === undefined ? prefersDarkMode : isDarkMode
+  useEffect(() => {
+    if (!window) return
+
+    setDarkMode(isDarkMode === undefined ? prefersDarkMode : isDarkMode)
+  }, [isDarkMode, prefersDarkMode])
 
   useEffect(() => {
     if (!window) return

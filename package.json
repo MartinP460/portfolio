@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
+    "animate.css": "^4.1.1",
     "clsx": "^1.2.1",
     "eslint-config-prettier": "^8.5.0",
     "gray-matter": "^4.0.3",
@@ -22,6 +23,7 @@
     "normalize.css": "^8.0.1",
     "prettier": "^2.7.1",
     "react": "18.2.0",
+    "react-animation-on-scroll": "^5.1.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
@@ -32,6 +34,7 @@
     "@types/markdown-it": "^12.2.3",
     "@types/node": "18.6.1",
     "@types/react": "18.0.15",
+    "@types/react-animate-on-scroll": "^2.1.5",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.8",
     "eslint": "8.20.0",

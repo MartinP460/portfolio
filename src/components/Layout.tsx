@@ -11,7 +11,7 @@ const Layout = ({ sideNavigation, children }: LayoutProps) => {
   return (
     <>
       {sideNavigation && <SideNavigation />}
-      <main className="max-w-5xl mx-auto px-4 lg:px-12 w-full">
+      <main className="max-w-5xl mx-auto px-4 lg:px-20 xl:px-12 w-full">
         <Navbar />
         {children}
       </main>

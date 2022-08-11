@@ -39,3 +39,26 @@
   background-color: white;
   height: 3px;
 }
+
+/* Custom scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(36 74 131 / 80%);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255 255 255 / 50%);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255 255 255 / 80%);
+}

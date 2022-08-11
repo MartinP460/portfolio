@@ -9,3 +9,5 @@ export type Project = {
   priority: 1 | 2 | 3
   content: string
 }
+
+export type Thumbnail = Omit<Project, 'content'>

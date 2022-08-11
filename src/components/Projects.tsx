@@ -1,12 +1,8 @@
-import { Project as ProjectType } from '../types/project'
+import { Thumbnail } from '../types/project'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import Project from './Project'
 
-const Projects = ({
-  projects
-}: {
-  projects: Omit<ProjectType, 'content'>[]
-}) => {
+const Projects = ({ projects }: { projects: Thumbnail[] }) => {
   return (
     <AnimationOnScroll animateIn="animate__fadeIn" animateOnce>
       <section className="py-36 md:py-48" id="projects">

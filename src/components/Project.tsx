@@ -1,4 +1,4 @@
-import { Project } from '../types/project'
+import { Thumbnail } from '../types/project'
 import { ExternalLinkIcon } from '@heroicons/react/outline'
 import { GithubIcon, DiagonalLinesPattern } from './icons'
 import Image from 'next/image'
@@ -6,7 +6,7 @@ import NextLink from 'next/link'
 import Link from './Link'
 import clsx from 'clsx'
 
-const Project = ({ project }: { project: Omit<Project, 'content'> }) => {
+const Project = ({ project }: { project: Thumbnail }) => {
   const links = (repoUrl: string, liveUrl: string, className?: string) => (
     <ul className={clsx('flex gap-4', className)}>
       <li>

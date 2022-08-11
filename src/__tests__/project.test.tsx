@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
-import { Project as ProjectType } from '../types/project'
+import { Thumbnail } from '../types/project'
 import Project from '../components/Project'
 import '@testing-library/jest-dom'
 
 describe('Project component', () => {
-  const mockProject: Omit<ProjectType, 'content'> = {
+  const mockProject: Thumbnail = {
     title: 'Onsplash',
     intro:
       'Test Onsplash is a clone/recreation of the image-sharing platform Unsplash. In addition to replicating Unsplash’s iconic gallery design, Onsplash enables users to perform CRUD operations on their own and other’s images.',

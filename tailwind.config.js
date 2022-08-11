@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
+      mono: ['Source Code Pro', 'monospace'],
       heading: ['Barlow', 'sans-serif']
     },
     extend: {

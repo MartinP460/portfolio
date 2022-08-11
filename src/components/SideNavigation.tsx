@@ -11,7 +11,7 @@ const SideNavigation = () => {
 
   // this calculates the width of the sidebar from what the margin and padding is in index.tsx
   const sidebarWidth =
-    'w-[calc((100vw_-_(1024px_-_40px))_/_2)] lg:w-[calc((100vw_-_(1024px_-_140px))_/_2)]'
+    'w-[calc((100vw_-_(1024px_-_40px))_/_2)] lg:w-[calc((100vw_-_(1024px_-_140px))_/_2)] xl:w-[calc((100vw_-_(1024px_-_60px))_/_2)]'
 
   const iconStyles =
     'w-6 hover:text-primary-700 dark:hover:text-primary-500 transition'

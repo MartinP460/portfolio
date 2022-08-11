@@ -10,13 +10,13 @@ const Navbar = () => {
   return (
     <nav className="py-3 h-20">
       <div className="flex justify-end items-center gap-4">
-        <DarkModeToggle className="hidden md:flex" />
-        <Button className="hidden md:block">Resume</Button>
+        <DarkModeToggle className="hidden lg:flex" />
+        <Button className="hidden lg:block">Resume</Button>
         <button
           type="button"
           onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
           className={clsx(
-            'burger md:hidden z-30 outline-none dark:before:bg-white dark:after:bg-white',
+            'burger lg:hidden z-30 outline-none dark:before:bg-white dark:after:bg-white',
             sidebarIsOpen ? 'burger--active fixed mt-8' : ''
           )}
         ></button>

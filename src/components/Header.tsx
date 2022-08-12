@@ -6,7 +6,7 @@ const Header = () => {
   const router = useRouter()
 
   return (
-    <section className="flex min-h-[90vh] flex-col justify-center">
+    <section className="mt-20 flex min-h-[90vh] flex-col justify-center">
       <p className=" mt-4 mr-5 font-bold text-gray-600 dark:text-gray-500">
         Hey - I&apos;m
       </p>

@@ -3,13 +3,21 @@ import clsx from 'clsx'
 import Button from './Button'
 import DarkModeToggle from './DarkModeToggle'
 import Sidebar from './Sidebar'
+import useNavbarScroll from '../hooks/useNavbarScroll'
 
 const Navbar = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
+  const [visible, isAtTop] = useNavbarScroll()
 
   return (
-    <nav className="h-20 py-3">
-      <div className="flex items-center justify-end gap-4">
+    <nav
+      className={clsx(
+        'fixed top-0 left-0 z-20 h-20 w-full bg-white py-3 px-4 backdrop-blur-md transition dark:bg-primary-800/90 sm:px-8 lg:pr-20',
+        visible ? 'translate-y-0' : '-translate-y-20',
+        isAtTop ? 'shadow-none dark:bg-primary-800/100' : 'shadow-lg'
+      )}
+    >
+      <div className="flex h-full items-center justify-end gap-4">
         <DarkModeToggle className="hidden lg:flex" />
         <Button className="hidden lg:block">Resume</Button>
         <button

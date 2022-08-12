@@ -7,11 +7,11 @@ const Contact = () => {
 
   return (
     <section className="py-36 md:py-48" id="contact">
-      <div className="w-full flex items-center">
-        <h3 className="font-heading text-lg tracking-widest font-bold uppercase whitespace-nowrap dark:text-white">
+      <div className="flex w-full items-center">
+        <h3 className="whitespace-nowrap font-heading text-lg font-bold uppercase tracking-widest dark:text-white">
           Contact
         </h3>
-        <div className="w-full h-0.5 bg-gray-200 mx-8 rounded max-w-md"></div>
+        <div className="mx-8 h-0.5 w-full max-w-md rounded bg-gray-200"></div>
       </div>
       <div className="mt-12">
         <p className="max-w-lg text-gray-600 dark:text-gray-400">
@@ -20,9 +20,9 @@ const Contact = () => {
           few different social media platforms, and you can find links to those
           profiles below.
         </p>
-        <div className="flex items-center gap-10 mt-10">
+        <div className="mt-10 flex items-center gap-10">
           <Button
-            className="after:-left-[150%]"
+            className="after:left-[-150%]"
             onClick={() => router.push('mailto:martin.polley460@gmail.com')}
           >
             Mail
@@ -35,7 +35,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 title="Stackoverflow profile"
               >
-                <GithubIcon className="w-8 h-8 dark:fill-white" />
+                <GithubIcon className="h-8 w-8 dark:fill-white" />
               </a>
             </li>
             <li>
@@ -45,7 +45,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 title="Stackoverflow profile"
               >
-                <StackoverflowIcon className="w-8 h-8" />
+                <StackoverflowIcon className="h-8 w-8" />
               </a>
             </li>
           </ul>

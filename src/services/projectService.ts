@@ -13,7 +13,7 @@ const getProject = (slug: string, fields: string[] = []) => {
   const items: { [key: string]: string | number } = {}
 
   for (const field of fields) {
-    if (typeof data[field] !== undefined) {
+    if (data[field] !== undefined) {
       items[field] = data[field]
     }
 

@@ -16,7 +16,7 @@ const Project = ({ project }: { project: Thumbnail }) => {
           rel="noopener noreferrer"
           title="Github repository"
         >
-          <GithubIcon className="w-7 h-7 fill-primary-800 hover:fill-primary-500 transition" />
+          <GithubIcon className="h-7 w-7 fill-primary-800 transition hover:fill-primary-500 dark:fill-white md:dark:fill-primary-800" />
         </a>
       </li>
       <li>
@@ -26,7 +26,7 @@ const Project = ({ project }: { project: Thumbnail }) => {
           rel="noopener noreferrer"
           title="Live example"
         >
-          <ExternalLinkIcon className="w-7 h-7 stroke-primary-800 hover:stroke-primary-500 transition" />
+          <ExternalLinkIcon className="h-7 w-7 stroke-primary-800 transition hover:stroke-primary-500 dark:stroke-white md:dark:stroke-primary-800" />
         </a>
       </li>
     </ul>
@@ -37,20 +37,21 @@ const Project = ({ project }: { project: Thumbnail }) => {
 
   return (
     <li className="flex flex-col md:flex-row">
-      <div className="w-full order-1 mt-5 min-h-[14rem] flex-shrink-0 relative md:w-3/5 md:order-2 md:mt-0">
+      <div className="relative order-1 mt-5 min-h-[14rem] w-full shrink-0 md:order-2 md:mt-0 md:w-3/5">
         <NextLink href={`/projects/${slug}`}>
           <a>
             <Image
               src={coverImage}
               layout="fill"
               objectFit="cover"
-              className="rounded hover:scale-110 transition"
+              alt="A picture of the project"
+              className="rounded transition hover:scale-110"
             />
           </a>
         </NextLink>
         <DiagonalLinesPattern
           className={clsx(
-            'absolute top-0 rounded hidden md:block',
+            'absolute top-0 hidden rounded md:block',
             priority === 2 ? 'right-0' : ''
           )}
         >
@@ -59,8 +60,8 @@ const Project = ({ project }: { project: Thumbnail }) => {
       </div>
       <div
         className={clsx(
-          'w-full flex flex-col md:min-h-[300px]',
-          priority === 2 ? 'md:order-1 md:mr-6' : 'md:ml-10 md:order-2'
+          'flex w-full flex-col md:min-h-[300px]',
+          priority === 2 ? 'md:order-1 md:mr-6' : 'md:order-2 md:ml-10'
         )}
       >
         <ul className="flex gap-6">
@@ -70,7 +71,7 @@ const Project = ({ project }: { project: Thumbnail }) => {
             </li>
           ))}
         </ul>
-        <h4 className="font-heading font-light text-4xl mt-3 md:text-5xl dark:text-white">
+        <h4 className="mt-3 font-heading text-4xl font-light dark:text-white md:text-5xl">
           {title}
         </h4>
         <p
@@ -79,14 +80,14 @@ const Project = ({ project }: { project: Thumbnail }) => {
         >
           {intro}
         </p>
-        <div className="h-full items-end hidden md:flex">
+        <div className="hidden h-full items-end md:flex">
           <Link href={`/projects/${slug}`} data-testid="project-page-link">
             Read more
           </Link>
         </div>
       </div>
-      <div className="md:hidden order-last flex justify-between items-center mt-4">
-        <div className="h-full flex items-end">
+      <div className="order-last mt-4 flex items-center justify-between md:hidden">
+        <div className="flex h-full items-end">
           <Link href={`/projects/${slug}`}>Read more</Link>
         </div>
         {links(repoUrl, liveUrl)}

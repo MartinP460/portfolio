@@ -33,7 +33,7 @@ const Sidebar = ({ open, close }: SidebarProps) => {
       <div
         onClick={() => close()}
         className={clsx(
-          'fixed h-screen w-1/2 bg-gray-600/50 top-0 left-0 z-10 hidden',
+          'fixed top-0 left-0 z-10 hidden h-screen w-1/2 bg-gray-600/50',
           '-translate-y-full transition-transform',
           'md:block',
           open ? '-translate-y-0' : ''
@@ -41,14 +41,14 @@ const Sidebar = ({ open, close }: SidebarProps) => {
       ></div>
       <div
         className={clsx(
-          'fixed h-screen w-screen bg-primary-800/70 top-0 right-0 z-20',
-          'translate-x-full transition-transform backdrop-blur-md backdrop-brightness-90',
-          'flex flex-col p-16 pb-32 gap-8 justify-center',
+          'fixed top-0 right-0 z-20 h-screen w-screen bg-primary-800/70',
+          'translate-x-full backdrop-blur-md backdrop-brightness-90 transition-transform',
+          'flex flex-col justify-center gap-8 p-16 pb-32',
           'md:w-1/2',
           open ? 'translate-x-0' : ''
         )}
       >
-        <DarkModeToggle className="text-white flex self-center mb-8" />
+        <DarkModeToggle className="mb-8 flex self-center text-white" />
         <a href="#about" className={linkStyle} onClick={() => close()}>
           About me
           <UserIcon className="w-6 text-white/50" />
@@ -68,7 +68,7 @@ const Sidebar = ({ open, close }: SidebarProps) => {
           Contact
           <MailIcon className="w-6 text-white/50" />
         </a>
-        <Button className="border-white text-white self-center mt-8">
+        <Button className="mt-8 self-center border-white text-white">
           Resume
         </Button>
       </div>

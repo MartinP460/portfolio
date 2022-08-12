@@ -9,7 +9,7 @@ interface LayoutProps {
 
 const Layout = ({ sideNavigation, children }: LayoutProps) => {
   return (
-    <div className="max-w-6xl mx-auto flex">
+    <div className="mx-auto flex max-w-6xl">
       {sideNavigation && <SideNavigation />}
       <main className="w-full px-4 sm:px-8 lg:pr-20">
         <Navbar />

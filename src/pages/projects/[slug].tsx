@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import { Project } from '../../types/project'
+import { Project as ProjectType } from '../../types/project'
 import {
   getProjectsSlugs,
   getProjectBySlug
@@ -13,7 +13,7 @@ import AlertBox from '../../components/AlertBox'
 import Contact from '../../components/Contact'
 
 interface ProjectProps {
-  project: Project
+  project: ProjectType
 }
 
 const Project: NextPage<ProjectProps> = ({ project }) => {
@@ -25,20 +25,20 @@ const Project: NextPage<ProjectProps> = ({ project }) => {
 
   return (
     <Layout>
-      <div className="max-w-3xl mx-auto mb-6">
+      <div className="mx-auto mb-6 max-w-3xl">
         <Highlight text="Project" className="text-lg" />
-        <div className="flex flex-col sm:items-center sm:flex-row">
-          <h1 className="font-semibold font-heading text-6xl mr-10 dark:text-white">
+        <div className="flex flex-col sm:flex-row sm:items-center">
+          <h1 className="mr-10 font-heading text-6xl font-semibold dark:text-white">
             {project.title}
           </h1>
-          <div className="flex mt-4">
-            <div className="bg-gray-300 h-4 w-4 rounded-full mr-6"></div>
+          <div className="mt-4 flex">
+            <div className="mr-6 h-4 w-4 rounded-full bg-gray-300"></div>
             <p className="text-gray-600 dark:text-gray-400">
               {readTime} minute read
             </p>
           </div>
         </div>
-        <p className="text-gray-600 mt-5 leading-relaxed dark:text-gray-400">
+        <p className="mt-5 leading-relaxed text-gray-600 dark:text-gray-400">
           {project.intro}
         </p>
       </div>
@@ -46,12 +46,13 @@ const Project: NextPage<ProjectProps> = ({ project }) => {
         src={project.coverImage}
         width="1024"
         height="625"
+        alt="A picture of the project"
         objectFit="cover"
         className="rounded"
       />
-      <div className="max-w-3xl mx-auto">
+      <div className="mx-auto max-w-3xl">
         <InfoBox title='"What is this?"' className="mt-6">
-          <p className="text-gray-600 text-sm dark:text-gray-400">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
             What you are about to read is a description of the project, to
             hopefully answer why and how I built this project, what I learned,
             what problems I faced and how I overcame them, as well as what I
@@ -59,7 +60,7 @@ const Project: NextPage<ProjectProps> = ({ project }) => {
           </p>
         </InfoBox>
         <AlertBox className="mt-4 text-sm">
-          <p className="text-gray-600 text-sm dark:text-gray-400">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
             Jeg har valgt at skrive beskrivelsen af dette projekt udelukkende på
             engelsk for at gøre den tilgængelig for flere personer. Tak for din
             forståelse.
@@ -67,9 +68,9 @@ const Project: NextPage<ProjectProps> = ({ project }) => {
         </AlertBox>
         <article
           dangerouslySetInnerHTML={{ __html: content }}
-          className="max-w-2xl mx-auto mt-6 prose dark:prose-invert"
+          className="prose mx-auto mt-6 max-w-2xl dark:prose-invert"
         />
-        <div className="max-w-2xl mx-auto">
+        <div className="mx-auto max-w-2xl">
           <Contact />
         </div>
       </div>

@@ -39,6 +39,6 @@ describe('Project component', () => {
   it('renders a link that links to the project page', () => {
     const anchor = screen.getAllByText('Read more', { selector: 'a' })[0]
 
-    expect(anchor).toHaveAttribute('href', '/onsplash')
+    expect(anchor).toHaveAttribute('href', '/projects/onsplash')
   })
 })

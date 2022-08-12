@@ -13,8 +13,8 @@ const SideNavigation = () => {
     'w-6 hover:text-primary-700 dark:hover:text-primary-500 transition'
 
   return (
-    <nav className="h-screen hidden lg:block w-20">
-      <ul className="fixed h-screen lg:w-20 xl:w-0 flex flex-col gap-10 justify-center items-center text-primary-800 dark:text-white">
+    <nav className="hidden h-screen w-20 lg:block">
+      <ul className="fixed flex h-screen flex-col items-center justify-center gap-10 text-primary-800 dark:text-white lg:w-20 xl:w-0">
         <li>
           <a
             href="#about"

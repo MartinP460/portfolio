@@ -1,10 +1,34 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "extends": ["next/core-web-vitals", "eslint-config-prettier", "standard"],
-  "rules": {
-    "prettier/prettier": "error",
-    "space-before-function-paren": 0,
-    "multiline-ternary": 0
-  },
-  "plugins": ["@typescript-eslint", "prettier"]
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest/globals": true
+    },
+    "extends": [
+        "standard",
+        "plugin:tailwindcss/recommended",
+        "plugin:react/recommended",
+        "next/core-web-vitals",
+        "eslint-config-prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "prettier",
+        "react",
+        "eslint-plugin-jest",
+        "tailwindcss",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "prettier/prettier": "error",
+        "space-before-function-paren": 0,
+        "multiline-ternary": 0
+    }
 }

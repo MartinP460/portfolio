@@ -9,7 +9,7 @@ const Highlight = ({
 }) => (
   <span
     className={clsx(
-      'font-semibold bg-clip-text text-transparent bg-gradient-to-br from-primary-800 to-primary-500 dark:from-primary-500 dark:to-primary-200',
+      'bg-gradient-to-br from-primary-800 to-primary-500 bg-clip-text font-semibold text-transparent dark:from-primary-500 dark:to-primary-200',
       className
     )}
   >

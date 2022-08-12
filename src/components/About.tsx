@@ -13,15 +13,15 @@ const About = () => {
   return (
     <AnimationOnScroll animateIn="animate__fadeIn" animateOnce>
       <section
-        className="pt-28 pb-36 flex flex-col items-center w-full gap-x-8 md:pb-48 md:flex-row"
+        className="flex w-full flex-col items-center gap-x-8 pt-28 pb-36 md:flex-row md:pb-48"
         id="about"
       >
         <div className="w-full">
-          <div className="w-full flex items-center">
-            <h3 className="font-heading text-lg tracking-widest font-bold uppercase whitespace-nowrap dark:text-white">
+          <div className="flex w-full items-center">
+            <h3 className="whitespace-nowrap font-heading text-lg font-bold uppercase tracking-widest dark:text-white">
               About me
             </h3>
-            <div className="w-full h-0.5 bg-gray-200 mx-8 rounded"></div>
+            <div className="mx-8 h-0.5 w-full rounded bg-gray-200"></div>
           </div>
           <div className="mt-4 text-gray-600 dark:text-gray-400">
             <p>
@@ -46,15 +46,16 @@ const About = () => {
         </div>
         <div className="mt-8 max-w-xs pr-5">
           <div className="relative">
-            <div className="hover:translate-x-3 hover:translate-y-3 transition-transform z-10 relative">
+            <div className="relative z-10 transition-transform hover:translate-x-3 hover:translate-y-3">
               <Image
                 src="/images/thispersondoesnotexist.jpg"
                 width={500}
                 height={500}
+                alt="A picture of me"
                 className="rounded"
               />
             </div>
-            <GridPattern className="absolute w-full h-full top-0 mt-4 ml-6 from-primary-800 dark:from-white" />
+            <GridPattern className="absolute top-0 mt-4 ml-6 h-full w-full from-primary-800 dark:from-white" />
           </div>
         </div>
       </section>

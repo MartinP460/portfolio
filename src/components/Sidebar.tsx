@@ -1,23 +1,21 @@
-import { useEffect } from 'react'
-import {
-  AdjustmentsIcon,
-  UserIcon,
-  PuzzleIcon,
-  MailIcon
-} from '@heroicons/react/outline'
+import { ReactNode, useEffect } from 'react'
+import { HomeIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'
+import Link from 'next/link'
 import DarkModeToggle from './DarkModeToggle'
 import Button from './Button'
 
 interface SidebarProps {
   open: boolean
   close(): void
+  links: {
+    title: string
+    href: string
+    icon: ReactNode
+  }[]
 }
 
-const Sidebar = ({ open, close }: SidebarProps) => {
-  const linkStyle =
-    'uppercase font-semibold text-white text-lg flex gap-8 items-center justify-between z-50'
-
+const Sidebar = ({ open, close, links }: SidebarProps) => {
   useEffect(() => {
     if (!document) return
 
@@ -27,6 +25,9 @@ const Sidebar = ({ open, close }: SidebarProps) => {
       document.body.style.overflowY = 'auto'
     }
   }, [open])
+
+  const linkStyle =
+    'uppercase font-semibold text-white text-lg flex gap-8 items-center justify-between z-50'
 
   return (
     <>
@@ -48,26 +49,22 @@ const Sidebar = ({ open, close }: SidebarProps) => {
           open ? 'translate-x-0' : ''
         )}
       >
-        <DarkModeToggle className="mb-8 flex self-center text-white" />
-        <a href="#about" className={linkStyle} onClick={() => close()}>
-          About me
-          <UserIcon className="w-6 text-white/50" />
-        </a>
-        <a href="#projects" className={linkStyle} onClick={() => close()}>
-          Projects
-          <AdjustmentsIcon
-            className="w-6 text-white/50"
-            onClick={() => close()}
-          />
-        </a>
-        <a href="#skillset" className={linkStyle} onClick={() => close()}>
-          Skillset
-          <PuzzleIcon className="w-6 text-white/50" />
-        </a>
-        <a href="#contact" className={linkStyle} onClick={() => close()}>
-          Contact
-          <MailIcon className="w-6 text-white/50" />
-        </a>
+        <div className="mb-8 flex items-center justify-between">
+          <Link href="/">
+            <a onClick={() => close()}>
+              <HomeIcon className="w-8 text-white" />
+            </a>
+          </Link>
+          <DarkModeToggle className="text-white" />
+        </div>
+        {links.map(({ title, href, icon }) => (
+          <Link href={href} key={title}>
+            <a className={linkStyle} onClick={() => close()}>
+              {title}
+              <span className="w-6 text-white/50">{icon}</span>
+            </a>
+          </Link>
+        ))}{' '}
         <Button className="mt-8 self-center border-white text-white">
           Resume
         </Button>

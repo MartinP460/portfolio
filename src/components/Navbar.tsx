@@ -1,11 +1,19 @@
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import clsx from 'clsx'
 import Button from './Button'
 import DarkModeToggle from './DarkModeToggle'
 import Sidebar from './Sidebar'
 import useNavbarScroll from '../hooks/useNavbarScroll'
 
-const Navbar = () => {
+interface NavbarProps {
+  sidebarLinks: {
+    title: string
+    href: string
+    icon: ReactNode
+  }[]
+}
+
+const Navbar = ({ sidebarLinks }: NavbarProps) => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
   const [visible, isAtTop] = useNavbarScroll()
 
@@ -39,6 +47,7 @@ const Navbar = () => {
       <Sidebar
         open={sidebarIsOpen}
         close={() => setSidebarIsOpen(!sidebarIsOpen)}
+        links={sidebarLinks}
       />
     </>
   )

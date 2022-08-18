@@ -1,6 +1,5 @@
 import { ReactNode } from 'react'
 import clsx from 'clsx'
-import Navbar from './Navbar'
 import SideNavigation from './SideNavigation'
 
 interface LayoutProps {
@@ -20,7 +19,6 @@ const Layout = ({ sideNavigation, verticalLines, children }: LayoutProps) => {
           verticalLines ? 'vertical-lines' : ''
         )}
       >
-        <Navbar />
         {children}
       </main>
     </div>

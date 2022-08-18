@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import { BookmarkIcon } from '@heroicons/react/outline'
 import { Project as ProjectType } from '../../types/project'
 import {
   getProjectsSlugs,
@@ -7,23 +8,32 @@ import {
 import MarkdownIt from 'markdown-it'
 import Image from 'next/image'
 import Layout from '../../components/Layout'
+import Navbar from '../../components/Navbar'
 import Highlight from '../../components/Highlight'
 import InfoBox from '../../components/InfoBox'
 import Contact from '../../components/Contact'
 
 interface ProjectProps {
   project: ProjectType
+  slugs: string[]
 }
 
-const Project: NextPage<ProjectProps> = ({ project }) => {
+const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
   const md = new MarkdownIt()
   const content = md.render(project.content)
 
   const words = project.content.trim().split(/\s+/).length
   const readTime = Math.ceil(words / 225)
 
+  const sidebarLinks = slugs.map((slug) => ({
+    title: slug,
+    href: slug === project.slug ? '#' : `/projects/${slug}`,
+    icon: <BookmarkIcon />
+  }))
+
   return (
     <Layout>
+      <Navbar sidebarLinks={sidebarLinks} />
       <div className="mx-auto mb-6 mt-20 max-w-3xl">
         <Highlight text="Project" className="text-lg" />
         <div className="flex flex-col sm:flex-row sm:items-center">
@@ -85,7 +95,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       // @ts-ignore
-      project: getProjectBySlug(params.slug)
+      project: getProjectBySlug(params.slug),
+      slugs: getProjectsSlugs()
     }
   }
 }

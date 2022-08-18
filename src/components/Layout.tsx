@@ -4,7 +4,7 @@ import Head from 'next/head'
 import SideNavigation from './SideNavigation'
 
 interface LayoutProps {
-  title: string
+  title?: string
   description: string
   sideNavigation?: boolean
   verticalLines?: boolean
@@ -21,7 +21,9 @@ const Layout = ({
   return (
     <>
       <Head>
-        <title>{`${title} | Martin Polley`}</title>
+        <title>
+          {title ? `${title} | Martin Polley` : 'Martin Polley - Portfolio'}
+        </title>
         <meta name="description" content={description} />
       </Head>
       <div className="mx-auto flex max-w-6xl">

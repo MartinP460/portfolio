@@ -45,7 +45,6 @@ const Index: NextPage<IndexProps> = ({ projects }) => {
 
   return (
     <Layout
-      title="Martin Polley"
       description="The personal portfolio of Martin Polley. Web developer who loves working with React and Next.js."
       sideNavigation
       verticalLines

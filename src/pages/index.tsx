@@ -14,7 +14,7 @@ interface IndexProps {
 
 const Index: NextPage<IndexProps> = ({ projects }) => {
   return (
-    <Layout sideNavigation>
+    <Layout sideNavigation verticalLines>
       <Header />
       <About />
       <Projects projects={projects} />

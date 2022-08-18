@@ -15,7 +15,9 @@ const Navbar = () => {
         className={clsx(
           'fixed top-0 left-0 z-20 h-20 w-full bg-white py-3 px-4 backdrop-blur-md transition dark:bg-primary-800/90 sm:px-8 lg:pr-20',
           visible ? 'translate-y-0' : '-translate-y-20',
-          isAtTop ? 'shadow-none dark:bg-primary-800/100' : 'shadow-lg'
+          isAtTop
+            ? 'bg-transparent shadow-none backdrop-blur-none dark:bg-transparent'
+            : 'shadow-lg'
         )}
       >
         <div className="mx-auto flex h-full max-w-6xl items-center justify-end gap-4">

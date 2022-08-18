@@ -1,17 +1,25 @@
 import { ReactNode } from 'react'
+import clsx from 'clsx'
 import Navbar from './Navbar'
 import SideNavigation from './SideNavigation'
 
 interface LayoutProps {
   sideNavigation?: boolean
+  verticalLines?: boolean
   children: ReactNode
 }
 
-const Layout = ({ sideNavigation, children }: LayoutProps) => {
+const Layout = ({ sideNavigation, verticalLines, children }: LayoutProps) => {
   return (
     <div className="mx-auto flex max-w-6xl">
       {sideNavigation && <SideNavigation />}
-      <main className="w-full px-4 sm:px-8 lg:pr-20">
+      <main
+        className={clsx(
+          'w-full px-4',
+          sideNavigation ? 'sm:px-8 lg:mr-20' : 'sm:px-8',
+          verticalLines ? 'vertical-lines' : ''
+        )}
+      >
         <Navbar />
         {children}
       </main>

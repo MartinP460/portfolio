@@ -9,7 +9,6 @@ import Image from 'next/image'
 import Layout from '../../components/Layout'
 import Highlight from '../../components/Highlight'
 import InfoBox from '../../components/InfoBox'
-import AlertBox from '../../components/AlertBox'
 import Contact from '../../components/Contact'
 
 interface ProjectProps {
@@ -25,7 +24,7 @@ const Project: NextPage<ProjectProps> = ({ project }) => {
 
   return (
     <Layout>
-      <div className="mx-auto mb-6 max-w-3xl">
+      <div className="mx-auto mb-6 mt-20 max-w-3xl">
         <Highlight text="Project" className="text-lg" />
         <div className="flex flex-col sm:flex-row sm:items-center">
           <h1 className="mr-10 font-heading text-6xl font-semibold dark:text-white">
@@ -42,14 +41,16 @@ const Project: NextPage<ProjectProps> = ({ project }) => {
           {project.intro}
         </p>
       </div>
-      <Image
-        src={project.coverImage}
-        width="1024"
-        height="625"
-        alt="A picture of the project"
-        objectFit="cover"
-        className="rounded"
-      />
+      <div className="flex w-full justify-center">
+        <Image
+          src={project.coverImage}
+          width="1024"
+          height="625"
+          alt="A picture of the project"
+          objectFit="cover"
+          className="rounded"
+        />
+      </div>
       <div className="mx-auto max-w-3xl">
         <InfoBox title='"What is this?"' className="mt-6">
           <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -59,13 +60,6 @@ const Project: NextPage<ProjectProps> = ({ project }) => {
             would do differently next time, and how I would make it better.
           </p>
         </InfoBox>
-        <AlertBox className="mt-4 text-sm">
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            Jeg har valgt at skrive beskrivelsen af dette projekt udelukkende på
-            engelsk for at gøre den tilgængelig for flere personer. Tak for din
-            forståelse.
-          </p>
-        </AlertBox>
         <article
           dangerouslySetInnerHTML={{ __html: content }}
           className="prose mx-auto mt-6 max-w-2xl dark:prose-invert"

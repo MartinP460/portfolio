@@ -33,7 +33,7 @@ const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
 
   return (
     <Layout title={project.title} description={project.intro}>
-      <Navbar sidebarLinks={sidebarLinks} />
+      <Navbar sidebarLinks={sidebarLinks} homeButton />
       <div className="mx-auto mb-6 mt-20 max-w-3xl">
         <Highlight text="Project" className="text-lg" />
         <div className="flex flex-col sm:flex-row sm:items-center">

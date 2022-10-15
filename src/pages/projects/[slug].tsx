@@ -5,6 +5,7 @@ import {
   getProjectsSlugs,
   getProjectBySlug
 } from '../../services/projectService'
+import highlightjs from 'markdown-it-highlightjs'
 import MarkdownIt from 'markdown-it'
 import Image from 'next/image'
 import Layout from '../../components/Layout'
@@ -12,6 +13,7 @@ import Navbar from '../../components/Navbar'
 import Highlight from '../../components/Highlight'
 import InfoBox from '../../components/InfoBox'
 import Contact from '../../components/Contact'
+import 'highlight.js/styles/atom-one-dark.css'
 
 interface ProjectProps {
   project: ProjectType
@@ -19,7 +21,7 @@ interface ProjectProps {
 }
 
 const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
-  const md = new MarkdownIt()
+  const md = new MarkdownIt().use(highlightjs)
   const content = md.render(project.content)
 
   const words = project.content.trim().split(/\s+/).length

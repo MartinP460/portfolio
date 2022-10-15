@@ -7,7 +7,6 @@ interface LayoutProps {
   title?: string
   description: string
   sideNavigation?: boolean
-  verticalLines?: boolean
   children: ReactNode
 }
 
@@ -15,7 +14,6 @@ const Layout = ({
   title,
   description,
   sideNavigation,
-  verticalLines,
   children
 }: LayoutProps) => {
   return (
@@ -31,8 +29,7 @@ const Layout = ({
         <main
           className={clsx(
             'w-full px-4',
-            sideNavigation ? 'sm:px-8 lg:mr-20' : 'sm:px-8',
-            verticalLines ? 'vertical-lines' : ''
+            sideNavigation ? 'sm:px-8 lg:mr-20' : 'sm:px-8'
           )}
         >
           {children}

@@ -23,9 +23,9 @@ const Header = () => {
       <p className="mt-8 max-w-2xl text-gray-600 dark:text-gray-400">
         I&apos;m a passionate front-end developer from{' '}
         <Highlight text="Copenhagen, Denmark" />. I love working in React and
-        Next.js to build applications that solve real problems. I&apos;m looking
-        for new gigs, so if you&apos;re interested in working with me, please
-        get in touch.
+        Next.js to build applications that solve real problems. I&apos;m not
+        currently looking for new opportunities but I&apos;m always down for a
+        chat, so feel free to contact me.
       </p>
       <Button className="mt-8" onClick={() => router.push('#projects')}>
         Projects

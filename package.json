@@ -14,17 +14,17 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
-    "animate.css": "^4.1.1",
     "clsx": "^1.2.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^26.8.2",
     "gray-matter": "^4.0.3",
+    "highlight.js": "^11.6.0",
     "markdown-it": "^13.0.1",
+    "markdown-it-highlightjs": "^4.0.1",
     "next": "12.2.3",
     "normalize.css": "^8.0.1",
     "prettier": "^2.7.1",
     "react": "18.2.0",
-    "react-animation-on-scroll": "^5.1.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {

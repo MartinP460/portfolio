@@ -1,7 +1,6 @@
 import { AppProps } from 'next/app'
 
 import '../styles/globals.css'
-import 'animate.css/animate.min.css'
 
 const CustomApp = ({ Component, pageProps }: AppProps) => {
   return (

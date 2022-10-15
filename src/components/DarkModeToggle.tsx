@@ -25,7 +25,7 @@ const DarkModeToggle = ({ className }: { className?: string }) => {
       />
       <MoonIcon
         className={clsx(
-          'w-8 transition-colors hover:text-blue-200',
+          'w-8 transition-colors hover:text-primary-200',
           isDark ? 'hidden' : ''
         )}
       />

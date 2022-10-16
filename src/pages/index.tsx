@@ -8,6 +8,7 @@ import {
 import { getAllProjectsData } from '../services/projectService'
 import { Project } from '../types/project'
 import Layout from '../components/Layout'
+import SideNavigation from './../components/SideNavigation'
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 import About from '../components/About'
@@ -45,15 +46,22 @@ const Index: NextPage<IndexProps> = ({ projects }) => {
 
   return (
     <Layout
+      title="Home"
       description="The personal portfolio of Martin Polley. Web developer who loves working with React and Next.js."
-      sideNavigation
     >
-      <Navbar sidebarLinks={sidebarLinks} />
-      <Header />
-      <About />
-      <Projects projects={projects} />
-      <Skillset />
-      <Contact />
+      <div className="transition-colors dark:bg-primary-800">
+        <div className="mx-auto flex max-w-6xl">
+          <SideNavigation />
+          <div className="px-4 sm:px-8 lg:ml-20">
+            <Navbar sidebarLinks={sidebarLinks} />
+            <Header />
+            <About />
+            <Projects projects={projects} />
+            <Skillset />
+            <Contact />
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }

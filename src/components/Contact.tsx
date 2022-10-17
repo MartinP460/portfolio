@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { GithubIcon, StackoverflowIcon } from './icons'
+import { GithubIcon, LinkedInIcon } from './icons'
 import Button from './Button'
 
 const Contact = () => {
@@ -20,32 +20,33 @@ const Contact = () => {
           few different social media platforms, and you can find links to those
           profiles below.
         </p>
-        <div className="mt-10 flex items-center gap-10">
+        <div className="mt-10 flex items-center gap-4">
+          <Button className="after:left-[-150%]">Resume</Button>
           <Button
             className="after:left-[-150%]"
             onClick={() => router.push('mailto:martin.polley460@gmail.com')}
           >
             Mail
           </Button>
-          <ul className="flex gap-4">
+          <ul className="ml-4 flex items-center gap-4">
             <li>
               <a
                 href="https://github.com/MartinP460"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Stackoverflow profile"
+                title="Github profile"
               >
                 <GithubIcon className="h-8 w-8 dark:fill-white" />
               </a>
             </li>
             <li>
               <a
-                href="https://stackoverflow.com/users/19493125/mart"
+                href="https://www.linkedin.com/in/martin-polley-37b907247/"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Stackoverflow profile"
+                title="LinkedIn profile"
               >
-                <StackoverflowIcon className="h-8 w-8" />
+                <LinkedInIcon className="h-8 w-8 dark:fill-white" />
               </a>
             </li>
           </ul>

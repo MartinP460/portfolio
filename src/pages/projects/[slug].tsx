@@ -95,6 +95,7 @@ const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
             <div className="absolute z-10 h-full w-full bg-primary-500/10 dark:bg-accent-200/10"></div>
             <Image
               src={project.coverImage}
+              priority
               layout="fill"
               width="1024"
               height="625"

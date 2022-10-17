@@ -9,7 +9,7 @@ slug: 'react-denmark-map'
 coverImage: '/images/react-denmark-map.png'
 liveUrl: 'https://react-denmark-map-demo.vercel.app'
 repoUrl: 'https://github.com/MartinP460/react-denmark-map'
-priority: 2
+priority: 1
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

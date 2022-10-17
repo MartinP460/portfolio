@@ -8,8 +8,8 @@ tags:
 slug: 'onsplash'
 coverImage: '/images/onsplash.png'
 liveUrl: 'https://onsplash.vercel.app/'
-repoUrl: 'https://github.com/MartinP460/portfolio/tree/main'
-priority: 1
+repoUrl: 'https://github.com/MartinP460/onsplash'
+priority: 2
 ---
 
 Like other projects, _Onsplash_ is an attempt at improving my skills in developing frontend applications. Onsplash is my first larger project and it implements several common core functionalities that many web applications have, i.e. user authentication and CRUD operations. More specifically, after a user signs up, they are able to "upload" an image which will be displayed publicly. Users will then be able to like that image and view it on the owner's page. All users are able to view, download and search for images.

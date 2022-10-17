@@ -6,9 +6,9 @@ tags:
   - TailwindCSS
   - Strapi
 slug: 'strapi-blog'
-coverImage: '/images/onsplash.jpg'
-liveUrl: 'https://onsplash.vercel.app/'
-repoUrl: 'https://github.com/MartinP460/portfolio/tree/main'
+coverImage: '/images/strapi-blog.png'
+liveUrl: 'https://strapi-blog-ebon.vercel.app/'
+repoUrl: 'https://github.com/MartinP460/strapi-blog'
 priority: 3
 ---
 

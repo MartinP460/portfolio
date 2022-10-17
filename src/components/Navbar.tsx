@@ -13,10 +13,10 @@ interface NavbarProps {
     href: string
     icon: ReactNode
   }[]
-  homeButton?: boolean
+  projectPage?: boolean
 }
 
-const Navbar = ({ sidebarLinks, homeButton }: NavbarProps) => {
+const Navbar = ({ sidebarLinks, projectPage }: NavbarProps) => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
   const [visible, isAtTop] = useNavbarScroll()
 
@@ -24,27 +24,35 @@ const Navbar = ({ sidebarLinks, homeButton }: NavbarProps) => {
     <>
       <nav
         className={clsx(
-          'fixed top-0 left-0 z-20 h-20 w-full bg-white py-3 px-4 backdrop-blur-md transition dark:bg-primary-800/90 md:px-8 lg:px-12',
+          'fixed top-0 left-0 z-30 h-20 w-full bg-white py-3 backdrop-blur-md transition dark:bg-primary-800/90',
           visible ? 'translate-y-0' : '-translate-y-20',
           isAtTop
             ? 'bg-transparent shadow-none backdrop-blur-none dark:bg-transparent'
-            : 'shadow-lg'
+            : 'shadow-lg',
+          projectPage ? 'px-0 2xl:px-12' : 'px-4 md:px-8 lg:px-12'
         )}
       >
         <div
           className={clsx(
-            'mx-auto flex h-full max-w-6xl items-center',
-            homeButton ? 'justify-between' : 'justify-end'
+            'mx-auto flex h-full items-center',
+            projectPage
+              ? 'max-w-screen-2xl justify-between px-8'
+              : 'max-w-6xl justify-end'
           )}
         >
-          {homeButton && (
+          {projectPage && (
             <Link href="/">
               <a className="hidden lg:block">
                 <ArrowLeftIcon className="w-10 text-primary-800 transition hover:-translate-x-1 hover:text-primary-200 dark:text-white dark:hover:text-primary-200" />
               </a>
             </Link>
           )}
-          <div className="flex items-center gap-8">
+          <div
+            className={clsx(
+              'flex items-center gap-8',
+              projectPage && isAtTop ? 'invisible' : 'visible'
+            )}
+          >
             <DarkModeToggle className="hidden lg:flex" />
             <Button className="hidden lg:block">Resume</Button>
           </div>
@@ -57,7 +65,8 @@ const Navbar = ({ sidebarLinks, homeButton }: NavbarProps) => {
           className={clsx(
             'burger outline-none transition dark:before:bg-white dark:after:bg-white lg:hidden',
             visible ? 'translate-y-0' : '-translate-y-20',
-            sidebarIsOpen ? 'burger--active' : ''
+            sidebarIsOpen ? 'burger--active' : '',
+            projectPage && isAtTop ? 'before:bg-white after:bg-white' : ''
           )}
         ></button>
       </div>

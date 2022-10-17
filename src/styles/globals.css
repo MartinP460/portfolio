@@ -15,7 +15,7 @@
 
 .burger:after,
 .burger:before {
-  background-color: #244a83;
+  background-color: #3c5e1c;
   border-radius: 2px;
   content: '';
   display: block;
@@ -69,4 +69,25 @@
 
 .dark ::-webkit-scrollbar-thumb:hover {
   background: rgb(255 255 255 / 80%);
+}
+
+pre ::-webkit-scrollbar {
+  height: 6px;
+  background: transparent;
+}
+
+/* Utility styles */
+
+.inner-shadow {
+  box-shadow: 0px -45px 80px 5px rgba(0, 0, 0, 0.75) inset;
+  -webkit-box-shadow: 0px -45px 80px 5px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: 0px -45px 80px 5px rgba(0, 0, 0, 0.75) inset;
+}
+
+@media (min-width: 1280px) {
+  .inner-shadow {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+  }
 }

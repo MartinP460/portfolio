@@ -1,6 +1,6 @@
 import { Thumbnail } from '../types/project'
 import { ExternalLinkIcon } from '@heroicons/react/outline'
-import { GithubIcon, DiagonalLinesPattern } from './icons'
+import { GithubIcon } from './icons'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import Link from './Link'
@@ -16,7 +16,7 @@ const Project = ({ project }: { project: Thumbnail }) => {
           rel="noopener noreferrer"
           title="Github repository"
         >
-          <GithubIcon className="h-7 w-7 fill-primary-800 transition hover:fill-primary-500 dark:fill-white md:dark:fill-primary-800" />
+          <GithubIcon className="h-7 w-7 fill-primary-800 transition hover:fill-primary-500" />
         </a>
       </li>
       <li>
@@ -26,7 +26,7 @@ const Project = ({ project }: { project: Thumbnail }) => {
           rel="noopener noreferrer"
           title="Live example"
         >
-          <ExternalLinkIcon className="h-7 w-7 stroke-primary-800 transition hover:stroke-primary-500 dark:stroke-white md:dark:stroke-primary-800" />
+          <ExternalLinkIcon className="h-7 w-7 stroke-primary-800 transition hover:stroke-primary-500" />
         </a>
       </li>
     </ul>
@@ -37,26 +37,27 @@ const Project = ({ project }: { project: Thumbnail }) => {
 
   return (
     <li className="flex flex-col md:flex-row">
-      <div className="relative order-1 mt-5 min-h-[14rem] w-full shrink-0 md:order-2 md:mt-0 md:w-3/5">
+      <div className="group relative order-1 mt-5 min-h-[14rem] w-full shrink-0 md:order-2 md:mt-0 md:w-3/5">
+        <div
+          className={clsx(
+            'absolute top-3 z-20 hidden rounded-full bg-secondary-300 md:block',
+            priority === 2 ? 'right-3' : 'left-3'
+          )}
+        >
+          {links(repoUrl, liveUrl, 'py-2 px-3')}
+        </div>
         <NextLink href={`/projects/${slug}`}>
           <a>
+            <div className="absolute z-10 h-full w-full bg-primary-500/10 dark:bg-orange-200/10"></div>
             <Image
               src={coverImage}
               layout="fill"
               objectFit="cover"
               alt="A picture of the project"
-              className="rounded transition hover:scale-110"
+              className="rounded brightness-90 transition group-hover:scale-110"
             />
           </a>
         </NextLink>
-        <DiagonalLinesPattern
-          className={clsx(
-            'absolute top-0 hidden rounded md:block',
-            priority === 2 ? 'right-0' : ''
-          )}
-        >
-          {links(repoUrl, liveUrl, 'p-4')}
-        </DiagonalLinesPattern>
       </div>
       <div
         className={clsx(

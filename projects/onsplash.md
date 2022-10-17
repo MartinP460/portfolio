@@ -6,7 +6,7 @@ tags:
   - GraphQL
   - Typescript
 slug: 'onsplash'
-coverImage: '/images/onsplash.jpg'
+coverImage: '/images/onsplash.png'
 liveUrl: 'https://onsplash.vercel.app/'
 repoUrl: 'https://github.com/MartinP460/portfolio/tree/main'
 priority: 1

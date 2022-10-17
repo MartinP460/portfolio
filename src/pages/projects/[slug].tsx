@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import { BookmarkIcon } from '@heroicons/react/outline'
+import { BookmarkIcon, ExternalLinkIcon } from '@heroicons/react/outline'
+import { GithubIcon } from '../../components/icons'
 import { Project as ProjectType } from '../../types/project'
 import {
   getProjectsSlugs,
@@ -33,51 +34,98 @@ const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
     icon: <BookmarkIcon />
   }))
 
+  const links = (
+    <ul className="mt-6 flex gap-4">
+      <li>
+        <a
+          href={project.repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Github repository"
+          className="group flex items-center rounded-lg bg-secondary-300 px-4 py-2"
+        >
+          <GithubIcon className="h-6 w-6 fill-primary-800 transition-colors group-hover:fill-primary-600" />
+          <p className="ml-2 text-sm font-semibold text-primary-800 transition-colors group-hover:text-primary-600">
+            Repository
+          </p>
+        </a>
+      </li>
+      <li>
+        <a
+          href={project.liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Live example"
+          className="group flex items-center rounded-lg bg-secondary-300 px-4 py-2"
+        >
+          <ExternalLinkIcon className="h-6 w-6 stroke-primary-800 transition-colors group-hover:stroke-primary-600" />
+          <p className="ml-2 text-sm font-semibold text-primary-800 transition-colors group-hover:text-primary-600">
+            Live demo
+          </p>
+        </a>
+      </li>
+    </ul>
+  )
+
   return (
     <Layout title={project.title} description={project.intro}>
-      <Navbar sidebarLinks={sidebarLinks} homeButton />
-      <div className="mx-auto mb-6 mt-20 max-w-3xl">
-        <Highlight text="Project" className="text-lg" />
-        <div className="flex flex-col sm:flex-row sm:items-center">
-          <h1 className="mr-10 font-heading text-6xl font-semibold dark:text-white">
-            {project.title}
-          </h1>
-          <div className="mt-4 flex">
-            <div className="mr-6 h-4 w-4 rounded-full bg-gray-300"></div>
-            <p className="text-gray-600 dark:text-gray-400">
-              {readTime} minute read
+      <Navbar sidebarLinks={sidebarLinks} projectPage />
+      <div className="transition-colors xl:dark:bg-primary-800">
+        <div className="inner-shadow relative mx-auto flex h-[60vh] max-w-screen-2xl flex-col justify-end xl:grid xl:grid-cols-2">
+          <div className="mb-4 px-4 sm:px-8 xl:flex xl:flex-col xl:justify-center">
+            <Highlight
+              text="Project"
+              className="from-primary-500 to-primary-200 text-lg"
+            />
+            <div className="xl:flex">
+              <h1 className="mr-10 font-heading text-5xl font-bold text-white xl:text-black xl:dark:text-white">
+                {project.title}
+              </h1>
+              <div className="mt-4 flex items-center">
+                <div className="mr-6 h-3 w-3 rounded-full bg-gray-400"></div>
+                <p className="text-gray-400">{readTime} minute read</p>
+              </div>
+            </div>
+            <p className="mt-4 hidden leading-relaxed text-gray-600 dark:text-gray-400 xl:block">
+              {project.intro}
             </p>
+            <div className="hidden xl:block">{links}</div>
+          </div>
+          <div className="fixed top-0 left-0 -z-50 h-[60vh] w-full xl:relative xl:z-0 xl:w-auto">
+            <div className="absolute z-10 h-full w-full bg-primary-500/10 dark:bg-accent-200/10"></div>
+            <Image
+              src={project.coverImage}
+              layout="fill"
+              width="1024"
+              height="625"
+              alt="A picture of the project"
+              objectFit="cover"
+              className="brightness-90"
+            />
           </div>
         </div>
-        <p className="mt-5 leading-relaxed text-gray-600 dark:text-gray-400">
-          {project.intro}
-        </p>
       </div>
-      <div className="flex w-full justify-center">
-        <Image
-          src={project.coverImage}
-          width="1024"
-          height="625"
-          alt="A picture of the project"
-          objectFit="cover"
-          className="rounded"
-        />
-      </div>
-      <div className="mx-auto max-w-3xl">
-        <InfoBox title='"What is this?"' className="mt-6">
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            What you are about to read is a description of the project, to
-            hopefully answer why and how I built this project, what I learned,
-            what problems I faced and how I overcame them, as well as what I
-            would do differently next time, and how I would make it better.
+      <div className="bg-white transition-colors dark:bg-primary-800">
+        <div className="z-50 mx-auto max-w-3xl bg-white px-4 pt-4 transition-colors dark:bg-primary-800">
+          <InfoBox className="mt-2">
+            <p className="text-sm leading-relaxed text-white">
+              What you are about to read is a description of the project, to
+              hopefully answer why and how I built this project, what I learned,
+              what problems I faced and how I overcame them, as well as what I
+              would do differently next time, and how I would make it better.
+            </p>
+          </InfoBox>
+          <div className="xl:hidden">{links}</div>
+          <p className="mt-4 text-lg leading-relaxed text-gray-600 dark:text-gray-400 xl:hidden">
+            {project.intro}
           </p>
-        </InfoBox>
-        <article
-          dangerouslySetInnerHTML={{ __html: content }}
-          className="prose mx-auto mt-6 max-w-2xl dark:prose-invert"
-        />
-        <div className="mx-auto max-w-2xl">
-          <Contact />
+          <article
+            dangerouslySetInnerHTML={{ __html: content }}
+            className="prose mx-auto mt-6 max-w-2xl prose-a:text-accent-500 prose-pre:bg-[#282c34] dark:prose-invert"
+          />
+          <div className="mx-auto max-w-2xl">
+            <Contact />
+          </div>
         </div>
       </div>
     </Layout>

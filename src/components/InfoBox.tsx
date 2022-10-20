@@ -10,14 +10,14 @@ const InfoBox = ({ children, className }: InfoBoxProps) => {
   return (
     <div
       className={clsx(
-        'mx-auto flex max-w-3xl items-center gap-5 rounded bg-accent-500 py-3 px-6 sm:pr-16 sm:pl-8 xl:max-w-2xl',
+        'mx-auto flex max-w-3xl items-center gap-5 rounded bg-primary-700 py-3 px-6 dark:bg-secondary-300 sm:pr-16 sm:pl-8 xl:max-w-2xl',
         className
       )}
     >
-      <p className="hidden w-16 justify-center text-8xl font-bold text-white sm:flex">
+      <p className="hidden w-16 justify-center text-8xl font-bold text-white dark:text-primary-800 sm:flex">
         ?
       </p>
-      <div>{children}</div>
+      <div className="text-white dark:text-primary-800">{children}</div>
     </div>
   )
 }

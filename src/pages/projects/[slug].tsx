@@ -72,7 +72,7 @@ const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
       <Navbar sidebarLinks={sidebarLinks} projectPage />
       <div className="transition-colors xl:dark:bg-primary-800">
         <div className="inner-shadow relative mx-auto flex h-[60vh] max-w-screen-2xl flex-col justify-end xl:grid xl:grid-cols-2">
-          <div className="mb-4 px-4 sm:px-8 xl:flex xl:flex-col xl:justify-center">
+          <div className="mb-8 px-4 sm:px-8 xl:flex xl:flex-col xl:justify-center">
             <Highlight
               text="Project"
               className="from-primary-500 to-primary-200 text-lg"
@@ -109,7 +109,7 @@ const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
       <div className="bg-white transition-colors dark:bg-primary-800">
         <div className="z-50 mx-auto max-w-3xl bg-white px-4 pt-4 transition-colors dark:bg-primary-800">
           <InfoBox className="mt-2">
-            <p className="text-sm leading-relaxed text-white">
+            <p className="text-sm leading-relaxed">
               What you are about to read is a description of the project, to
               hopefully answer why and how I built this project, what I learned,
               what problems I faced and how I overcame them, as well as what I
@@ -122,7 +122,7 @@ const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
           </p>
           <article
             dangerouslySetInnerHTML={{ __html: content }}
-            className="prose mx-auto mt-6 max-w-2xl prose-a:text-accent-500 prose-pre:bg-[#282c34] dark:prose-invert"
+            className="prose mx-auto mt-6 max-w-2xl prose-a:text-accent-500 prose-pre:bg-[#282c34] prose-img:mx-auto dark:prose-invert dark:prose-a:text-accent-200 prose-img:sm:max-h-[50vh]"
           />
           <div className="mx-auto max-w-2xl">
             <Contact />

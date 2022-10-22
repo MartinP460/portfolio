@@ -43,7 +43,14 @@ const Navbar = ({ sidebarLinks, projectPage }: NavbarProps) => {
           {projectPage && (
             <Link href="/">
               <a className="hidden lg:block">
-                <ArrowLeftIcon className="w-10 text-primary-800 transition hover:-translate-x-1 hover:text-primary-200 dark:text-white dark:hover:text-primary-200" />
+                <ArrowLeftIcon
+                  className={clsx(
+                    projectPage && isAtTop
+                      ? 'text-white'
+                      : 'text-primary-800 dark:text-white',
+                    'w-10 transition hover:-translate-x-1 hover:text-primary-200 dark:hover:text-primary-200'
+                  )}
+                />
               </a>
             </Link>
           )}

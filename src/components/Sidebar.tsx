@@ -34,7 +34,7 @@ const Sidebar = ({ open, close, links }: SidebarProps) => {
       <div
         onClick={() => close()}
         className={clsx(
-          'fixed top-0 left-0 z-20 hidden h-screen w-1/2 bg-gray-600/50',
+          'fixed top-0 left-0 z-30 hidden h-screen w-1/2 bg-gray-600/50',
           '-translate-y-full transition-transform',
           'md:block lg:hidden',
           open ? '-translate-y-0' : ''
@@ -42,7 +42,7 @@ const Sidebar = ({ open, close, links }: SidebarProps) => {
       ></div>
       <div
         className={clsx(
-          'fixed top-0 right-0 z-20 h-screen w-screen bg-primary-800/70',
+          'fixed top-0 right-0 z-30 h-screen w-screen bg-primary-800/70',
           'translate-x-full backdrop-blur-md transition-transform',
           'flex flex-col justify-center gap-8 p-16 pb-32',
           'md:w-1/2 lg:hidden',

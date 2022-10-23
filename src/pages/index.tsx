@@ -7,6 +7,7 @@ import {
 } from '@heroicons/react/outline'
 import { getAllProjectsData } from '../services/projectService'
 import { Project } from '../types/project'
+import useSmoothScroll from '../hooks/useSmoothScroll'
 import Layout from '../components/Layout'
 import SideNavigation from './../components/SideNavigation'
 import Navbar from '../components/Navbar'
@@ -20,29 +21,31 @@ interface IndexProps {
   projects: Project[]
 }
 
+const sidebarLinks = [
+  {
+    title: 'about',
+    href: '#about',
+    icon: <UserIcon />
+  },
+  {
+    title: 'projects',
+    href: '#projects',
+    icon: <PuzzleIcon />
+  },
+  {
+    title: 'skillset',
+    href: '#skillset',
+    icon: <AdjustmentsIcon />
+  },
+  {
+    title: 'contact',
+    href: '#contact',
+    icon: <MailIcon />
+  }
+]
+
 const Index: NextPage<IndexProps> = ({ projects }) => {
-  const sidebarLinks = [
-    {
-      title: 'about',
-      href: '#about',
-      icon: <UserIcon />
-    },
-    {
-      title: 'projects',
-      href: '#projects',
-      icon: <PuzzleIcon />
-    },
-    {
-      title: 'skillset',
-      href: '#skillset',
-      icon: <AdjustmentsIcon />
-    },
-    {
-      title: 'contact',
-      href: '#contact',
-      icon: <MailIcon />
-    }
-  ]
+  useSmoothScroll()
 
   return (
     <Layout

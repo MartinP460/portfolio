@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { BookmarkIcon, ExternalLinkIcon } from '@heroicons/react/outline'
 import { GithubIcon } from '../../components/icons'
@@ -23,10 +22,6 @@ interface ProjectProps {
 }
 
 const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
-  useEffect(() => {
-    document.documentElement.classList.remove('scroll-smooth')
-  }, [])
-
   const md = new MarkdownIt().use(highlightjs)
   const content = md.render(project.content)
 

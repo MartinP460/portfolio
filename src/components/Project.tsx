@@ -3,8 +3,8 @@ import { ExternalLinkIcon } from '@heroicons/react/outline'
 import { GithubIcon } from './icons'
 import Image from 'next/image'
 import NextLink from 'next/link'
-import Link from './Link'
 import clsx from 'clsx'
+import Link from './Link'
 
 const Project = ({ project }: { project: Thumbnail }) => {
   const links = (repoUrl: string, liveUrl: string, className?: string) => (
@@ -49,13 +49,15 @@ const Project = ({ project }: { project: Thumbnail }) => {
         <NextLink href={`/projects/${slug}`}>
           <a>
             <div className="absolute z-10 h-full w-full bg-primary-500/30 transition-colors group-hover:bg-primary-500/10"></div>
-            <Image
-              src={coverImage}
-              layout="fill"
-              objectFit="cover"
-              alt="A picture of the project"
-              className="rounded brightness-90 saturate-50 transition group-hover:scale-110 group-hover:saturate-100"
-            />
+            <div className="relative h-full w-full">
+              <Image
+                src={coverImage}
+                layout="fill"
+                objectFit="cover"
+                alt="A picture of the project"
+                className="rounded brightness-90 saturate-50 transition group-hover:scale-110 group-hover:saturate-100"
+              />
+            </div>
           </a>
         </NextLink>
       </div>

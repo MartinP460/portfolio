@@ -20,36 +20,40 @@ const Contact = () => {
           few different social media platforms, and you can find links to those
           profiles below.
         </p>
-        <div className="mt-10 flex items-center gap-4">
-          <Button className="after:left-[-150%]">Resume</Button>
-          <Button
-            className="after:left-[-150%]"
-            onClick={() => router.push('mailto:martin.polley460@gmail.com')}
-          >
-            Mail
-          </Button>
-          <ul className="ml-4 flex items-center gap-4">
-            <li>
-              <a
-                href="https://github.com/MartinP460"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Github profile"
-              >
-                <GithubIcon className="h-8 w-8 dark:fill-white" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/martin-polley-37b907247/"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="LinkedIn profile"
-              >
-                <LinkedInIcon className="h-8 w-8 dark:fill-white" />
-              </a>
-            </li>
-          </ul>
+        <div className="mt-10 flex flex-col justify-center gap-y-6 sm:flex-row sm:items-center sm:justify-start">
+          <div className="flex gap-4">
+            <Button className="after:left-[-150%]">Resume</Button>
+            <Button
+              className="after:left-[-150%]"
+              onClick={() => router.push('mailto:martin.polley460@gmail.com')}
+            >
+              Mail
+            </Button>
+          </div>
+          <div className="">
+            <ul className="ml-4 flex items-center gap-4">
+              <li>
+                <a
+                  href="https://github.com/MartinP460"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Github profile"
+                >
+                  <GithubIcon className="h-8 w-8 dark:fill-white" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/martin-polley-37b907247/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="LinkedIn profile"
+                >
+                  <LinkedInIcon className="h-8 w-8 dark:fill-white" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

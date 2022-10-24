@@ -6,10 +6,10 @@ const useSmoothScroll = () => {
   const router = useRouter()
 
   useEffect(() => {
-    document.documentElement.classList.add('scroll-smooth')
+    document.documentElement.style.scrollBehavior = 'smooth'
 
     const handleRouteChange = () => {
-      document.documentElement.classList.remove('scroll-smooth')
+      document.documentElement.style.scrollBehavior = 'auto'
     }
 
     router.events.on('routeChangeStart', handleRouteChange)

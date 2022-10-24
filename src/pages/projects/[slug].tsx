@@ -71,7 +71,7 @@ const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
     <Layout title={project.title} description={project.intro}>
       <Navbar sidebarLinks={sidebarLinks} projectPage />
       <div className="transition-colors xl:dark:bg-primary-800">
-        <div className="inner-shadow relative mx-auto flex h-[60vh] max-w-screen-2xl flex-col justify-end xl:grid xl:grid-cols-2">
+        <div className="inner-shadow relative mx-auto flex h-[450px] max-w-screen-2xl flex-col justify-end md:h-[550px] xl:grid xl:h-[650px] xl:grid-cols-2">
           <div className="mb-8 px-4 sm:px-8 xl:flex xl:flex-col xl:justify-center">
             <Highlight
               text="Project"
@@ -91,14 +91,12 @@ const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
             </p>
             <div className="hidden xl:block">{links}</div>
           </div>
-          <div className="fixed top-0 left-0 -z-50 h-[60vh] w-full xl:relative xl:z-0 xl:w-auto">
+          <div className="fixed top-0 left-0 -z-50 h-[450px] w-full md:h-[550px] xl:relative xl:z-0 xl:h-[650px] xl:w-auto">
             <div className="absolute z-10 h-full w-full bg-primary-500/10 dark:bg-accent-200/10"></div>
             <Image
               src={project.coverImage}
               priority
               layout="fill"
-              width="1024"
-              height="625"
               alt="A picture of the project"
               objectFit="cover"
               className="brightness-90"
@@ -122,7 +120,7 @@ const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
           </p>
           <article
             dangerouslySetInnerHTML={{ __html: content }}
-            className="prose mx-auto mt-6 max-w-2xl prose-a:text-accent-500 prose-pre:bg-[#282c34] prose-img:mx-auto dark:prose-invert dark:prose-a:text-accent-200 prose-img:sm:max-h-[50vh]"
+            className="prose mx-auto mt-6 max-w-2xl prose-a:text-accent-500 prose-pre:bg-[#282c34] prose-img:mx-auto dark:prose-invert dark:prose-a:text-accent-200 prose-img:sm:max-h-[450px]"
           />
           <div className="mx-auto max-w-2xl">
             <Contact />

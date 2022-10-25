@@ -8,7 +8,7 @@ const Skillset = () => {
     { title: 'libraries', items: ['tailwindcss', 'graphql', 'redux (+ RTK)'] },
     { title: 'testing', items: ['cypress', 'jest', 'react testing library'] },
     { title: 'version control', items: ['git', 'github'] },
-    { title: 'creative', items: ['figma', 'affinity desiger / photo'] }
+    { title: 'creative', items: ['figma', 'affinity designer / photo'] }
   ]
 
   return (

@@ -31,8 +31,6 @@ In summary, the main motivations for creating the project were:
 - Organizing a larger project
 - Recreating the UI with CSS
 
-## Analysis
-
 ### Organizing the project
 
 Organizing how to execute a project is one of the most important aspects of creating any larger project. One integral management tool I used to organize the project was a [kanban board](https://www.atlassian.com/agile/kanban/boards). The kanban board I used (and continue to use for most of my projects) is a simple 3-column board with the columns "to-do", "in progress" and "completed", and in this way I was able to keep track of what I was working on and what I had completed.
@@ -150,7 +148,13 @@ I adopted a folder structure inspired by [a blog post](https://dev.to/vadoreques
 
 I imagine there are better ways to structure a Next.js project, but it worked well for me.
 
-### What did you learn?
+### Things I would do differently
+
+There are a a few ways the project could be improved. Firstly, some pages could have been server-side rendered to avoid exposing API endpoints. Currently, almost all images that are displayed on the website are fetched client-side so fetching them server-side would obviously stop the API endpoints being exposed. Next.js supports this out of the box, but on the other hand, server-side rendering would mean that I wouldn't be able to use the component hooks provided by the Apollo Client.
+
+Another thing I would do differently would be to have a proper image API. There are many SaSS solutions that provides a service where you upload images which are then converted to individual endpoints. You could even make it yourself. I decided to simply reference the images hosted on Unsplash to avoid storage fees associated with hosting images on a server. There are several problems with this approach - firstly, it's not very moral of me to use their API for my own purposes, and secondly, it's very awkward for people to "upload" images because they have to reference a URL. Overall, it's not a very good solution, so hooking it up to something like Cloudinary would definitely be a huge improvement to Onsplash, even for performance.
+
+### Learnings I can use in the future
 
 The codebase is too big to cover everything I did in this project, but hopefully the code snippets and explanations above give you an idea of what I did to complete the project. In terms of what I learned from this project, I've listed a few things below.
 
@@ -159,14 +163,4 @@ The codebase is too big to cover everything I did in this project, but hopefully
 3. I recreated the Unsplash UI with TailwindCSS so I enhanced my skills using that.
 4. I learnt how to organize a larger project, i.e. with a solid folder structure.
 
-## Discussion
-
-### What would you do differently next time?
-
-There are a a few ways the project could be improved. Firstly, some pages could have been server-side rendered to avoid exposing API endpoints. Currently, almost all images that are displayed on the website are fetched client-side so fetching them server-side would obviously stop the API endpoints being exposed. Next.js supports this out of the box, but on the other hand, server-side rendering would mean that I wouldn't be able to use the component hooks provided by the Apollo Client.
-
-Another thing I would do differently would be to have a proper image API. There are many SaSS solutions that provides a service where you upload images which are then converted to individual endpoints. You could even make it yourself. I decided to simply reference the images hosted on Unsplash to avoid storage fees associated with hosting images on a server. There are several problems with this approach - firstly, it's not very moral of me to use their API for my own purposes, and secondly, it's very awkward for people to "upload" images because they have to reference a URL. Overall, it's not a very good solution, so hooking it up to something like Cloudinary would definitely be a huge improvement to Onsplash, even for performance.
-
-### Learnings I can use in the future
-
-As previously mentioned, learning Typescript and GraphQL was the main motivation for beginning the project, and after finishing the project I feel I have a much better understanding of both. Of course, building the project also had the added bonus of improving my skills using Next.js, TailwindCSS and Hasura.
+After finishing the project I feel I have a much better understanding of especially Typescript and GraphQL.

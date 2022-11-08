@@ -3,7 +3,7 @@ import { HomeIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'
 import Link from 'next/link'
 import DarkModeToggle from './DarkModeToggle'
-import Button from './Button'
+import ResumeButton from './ResumeButton'
 
 interface SidebarProps {
   open: boolean
@@ -65,9 +65,7 @@ const Sidebar = ({ open, close, links }: SidebarProps) => {
             </a>
           </Link>
         ))}{' '}
-        <Button className="mt-8 self-center border-white text-white">
-          Resume
-        </Button>
+        <ResumeButton className="mt-8 self-center border-white text-white" />
       </div>
     </>
   )

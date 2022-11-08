@@ -18,14 +18,15 @@ const Header = () => {
         <span>{'Polley />'}</span>
       </div>
       <h2 className="mt-4 font-heading text-5xl font-bold text-gray-600 dark:text-gray-500 sm:text-5xl lg:text-6xl">
-        I build cool software.
+        I build web projects.
       </h2>
       <p className="mt-8 max-w-2xl text-gray-600 dark:text-gray-400">
-        I&apos;m a passionate front-end developer from{' '}
-        <Highlight text="Copenhagen, Denmark" />. I love working in React and
-        Next.js to build applications that solve real problems. I&apos;m not
-        currently looking for new opportunities but I&apos;m always down for a
-        chat, so feel free to contact me.
+        I&apos;m a passionate web developer from{' '}
+        <Highlight text="Copenhagen, Denmark" /> focusing on frontend
+        development. I enjoy working in React and Next.js to build applications
+        that solve real problems. I&apos;m currently looking for new
+        opportunities and I&apos;m always down for a chat, so feel free to
+        contact me.
       </p>
       <Button className="mt-8" onClick={() => router.push('#projects')}>
         Projects

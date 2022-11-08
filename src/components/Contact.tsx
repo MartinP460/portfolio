@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { GithubIcon, LinkedInIcon } from './icons'
 import Button from './Button'
+import ResumeButton from './ResumeButton'
 
 const Contact = () => {
   const router = useRouter()
@@ -22,7 +23,7 @@ const Contact = () => {
         </p>
         <div className="mt-10 flex flex-col justify-center gap-y-6 sm:flex-row sm:items-center sm:justify-start">
           <div className="flex gap-4">
-            <Button className="after:left-[-150%]">Resume</Button>
+            <ResumeButton />
             <Button
               className="after:left-[-150%]"
               onClick={() => router.push('mailto:martin.polley460@gmail.com')}

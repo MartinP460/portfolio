@@ -24,35 +24,38 @@ const About = () => {
         <div className="mt-4 text-gray-600 dark:text-gray-400">
           <p>
             Hi, my name is Martin and I am a {myAge()}-year-old who enjoys
-            building clean and maintainable frontend projects. I&apos;m
-            currently in my first year of computer science at the University of
-            Copenhagen, although I have previous experience programming.
+            building clean and maintainable web projects. I&apos;m currently in
+            my first year of computer science at the University of Copenhagen,
+            but my interest in web development started during gymnasium.
           </p>
           <br />
           <p>
-            My first interaction with programming was during my first year of
-            gymnasium (high school) where I learned Python and subsequently got
-            hooked on programming. I later tried web development, found that I
-            really liked it and to this day I continue enhancing my frontend
-            skills.
+            I begun learning Python during my first year of gymnasium and after
+            getting hooked on it I decided to expand upon my programming skills
+            by taking it as a class. Determined to do something more with my
+            understanding of programming, I decided to take up web development
+            which I&apos;ve been doing ever since.
           </p>
           <br />
           <p>
-            Outside of development I enjoy reading, playing video games and
-            occasionally riding my mountainbike.
+            Outside of studying and creating projects I enjoy reading, playing
+            video games and occasionally riding my mountainbike.
           </p>
         </div>
       </div>
       <div className="mt-8 max-w-xs pr-5">
         <div className="relative">
-          <div className="relative z-10 transition-transform hover:translate-x-3 hover:translate-y-3">
-            <Image
-              src="/images/thispersondoesnotexist.jpg"
-              width={500}
-              height={500}
-              alt="A picture of me"
-              className="rounded"
-            />
+          <div className="group relative z-10 transition-transform hover:translate-x-3 hover:translate-y-3">
+            <div className="relative">
+              <Image
+                src="/images/me.png"
+                width={500}
+                height={500}
+                alt="A picture of me"
+                className="rounded brightness-90 saturate-[75%] transition group-hover:brightness-100 group-hover:saturate-100"
+              />
+            </div>
+            <div className="absolute top-0 h-[98%] w-full bg-primary-600/30 transition-colors group-hover:bg-transparent"></div>
           </div>
           <GridPattern className="absolute top-0 mt-4 ml-6 h-full w-full from-primary-800 dark:from-white" />
         </div>

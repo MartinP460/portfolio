@@ -91,3 +91,23 @@ pre ::-webkit-scrollbar {
     -moz-box-shadow: none;
   }
 }
+
+.animate-pop-in {
+  animation: pop-in 0.15s ease-in-out;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.green-filter {
+  filter: saturate(100%) invert(57%) sepia(20%) saturate(1302%)
+    hue-rotate(48deg) brightness(102%) contrast(88%);
+}

@@ -2,7 +2,7 @@ import { ReactNode, useState } from 'react'
 import { ArrowLeftIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'
 import Link from 'next/link'
-import Button from './Button'
+import ResumeButton from './ResumeButton'
 import DarkModeToggle from './DarkModeToggle'
 import Sidebar from './Sidebar'
 import useNavbarScroll from '../hooks/useNavbarScroll'
@@ -21,7 +21,6 @@ const Navbar = ({ sidebarLinks, projectPage }: NavbarProps) => {
   const [visible, isAtTop] = useNavbarScroll()
 
   // the conditional logic required is what has made the component a bit messy.
-  // TODO: refactor this component to make it more readable.
   return (
     <>
       <nav
@@ -58,7 +57,7 @@ const Navbar = ({ sidebarLinks, projectPage }: NavbarProps) => {
             )}
           >
             <DarkModeToggle className="hidden lg:flex" />
-            <Button className="hidden lg:block">Resume</Button>
+            <ResumeButton className="hidden lg:block" />
           </div>
         </div>
       </nav>

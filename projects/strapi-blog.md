@@ -1,6 +1,6 @@
 ---
 title: 'Strapi blog'
-intro: 'A simple blog posts app built using Strapi and Next.js, meant to practice connecting a CMS to a frontend.'
+intro: 'A simple blog posts app built using Strapi and Next.js, meant to practice connecting a CMS to a frontend. Includes several blogs with randomly generated titles and filled with dummy text.'
 tags:
   - Next.js
   - TailwindCSS

@@ -48,7 +48,6 @@ const Project = ({ project }: { project: Thumbnail }) => {
         </div>
         <NextLink href={`/projects/${slug}`}>
           <a>
-            <div className="absolute z-10 h-full w-full bg-primary-500/30 transition-colors group-hover:bg-primary-500/10"></div>
             <Image
               src={coverImage}
               layout="fill"
@@ -67,7 +66,7 @@ const Project = ({ project }: { project: Thumbnail }) => {
       >
         <ul className="flex gap-6">
           {tags.map((tag) => (
-            <li key={tag} className="text-gray-600 dark:text-gray-400">
+            <li key={tag} className="text-gray-600 dark:text-gray-300">
               {tag}
             </li>
           ))}
@@ -76,7 +75,7 @@ const Project = ({ project }: { project: Thumbnail }) => {
           {title}
         </h4>
         <p
-          className="mt-4 text-gray-600 dark:text-gray-400"
+          className="mt-4 text-gray-600 dark:text-gray-300"
           data-testid="intro-text"
         >
           {intro}

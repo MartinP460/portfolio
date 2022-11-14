@@ -52,7 +52,7 @@ const Index: NextPage<IndexProps> = ({ projects }) => {
       title="Home"
       description="The personal portfolio of Martin Polley. Web developer who loves working with React and Next.js."
     >
-      <div className="transition-colors dark:bg-primary-800">
+      <div className="transition-colors dark:bg-neutral-700">
         <div className="mx-auto flex max-w-6xl">
           <SideNavigation />
           <div className="w-full px-4 sm:px-8 lg:ml-20">

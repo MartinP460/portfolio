@@ -21,7 +21,7 @@ const About = () => {
           </h3>
           <div className="mx-8 h-0.5 w-full rounded bg-gray-200"></div>
         </div>
-        <div className="mt-4 text-gray-600 dark:text-gray-400">
+        <div className="mt-4 text-gray-600 dark:text-gray-300">
           <p>
             Hi, my name is Martin and I am a {myAge()}-year-old who enjoys
             building clean and maintainable web projects. I&apos;m currently in
@@ -30,7 +30,7 @@ const About = () => {
           </p>
           <br />
           <p>
-            I begun learning Python during my first year of gymnasium and after
+            I began learning Python during my first year of gymnasium and after
             getting hooked on it I decided to expand upon my programming skills
             by taking it as a class. Determined to do something more with my
             understanding of programming, I decided to take up web development
@@ -52,10 +52,10 @@ const About = () => {
                 width={500}
                 height={500}
                 alt="A picture of me"
-                className="rounded brightness-90 saturate-[75%] transition group-hover:brightness-100 group-hover:saturate-100"
+                className="rounded brightness-90 transition group-hover:brightness-100 group-hover:saturate-100"
               />
             </div>
-            <div className="absolute top-0 h-[98%] w-full bg-primary-600/30 transition-colors group-hover:bg-transparent"></div>
+            <div className="absolute top-0 h-[98%] w-full bg-primary-800/30 transition-colors group-hover:bg-transparent"></div>
           </div>
           <GridPattern className="absolute top-0 mt-4 ml-6 h-full w-full from-primary-800 dark:from-white" />
         </div>

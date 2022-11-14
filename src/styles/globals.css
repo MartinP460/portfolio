@@ -60,7 +60,7 @@
 }
 
 .dark ::-webkit-scrollbar-track {
-  background: #283f13;
+  background: rgb(64 64 64);
 }
 
 .dark ::-webkit-scrollbar-thumb {

@@ -25,7 +25,7 @@ const Navbar = ({ sidebarLinks, projectPage }: NavbarProps) => {
     <>
       <nav
         className={clsx(
-          'top-0 left-0 z-30 h-20 w-full bg-white backdrop-blur-md transition dark:bg-primary-800/90',
+          'top-0 left-0 z-30 h-20 w-full bg-white/90 backdrop-blur-md transition dark:bg-neutral-700/90',
           sidebarIsOpen ? 'hidden' : 'fixed',
           visible ? 'lg:translate-y-0' : 'lg:-translate-y-20',
           isAtTop

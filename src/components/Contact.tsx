@@ -15,7 +15,7 @@ const Contact = () => {
         <div className="mx-8 h-0.5 w-full max-w-md rounded bg-gray-200"></div>
       </div>
       <div className="mt-12">
-        <p className="max-w-lg text-gray-600 dark:text-gray-400">
+        <p className="max-w-lg text-gray-600 dark:text-gray-300">
           I&apos;m looking for new opportunities and people to connect with so
           you&apos;re more than welcome to contact me! I&apos;m also active on a
           few different social media platforms, and you can find links to those

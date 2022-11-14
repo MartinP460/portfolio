@@ -70,7 +70,7 @@ const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
   return (
     <Layout title={project.title} description={project.intro}>
       <Navbar sidebarLinks={sidebarLinks} projectPage />
-      <div className="transition-colors xl:dark:bg-primary-800">
+      <div className="transition-colors xl:dark:bg-neutral-700">
         <div className="inner-shadow relative mx-auto flex h-[450px] max-w-screen-2xl flex-col justify-end md:h-[550px] xl:grid xl:h-[650px] xl:grid-cols-2">
           <div className="mb-8 px-4 sm:px-8 xl:flex xl:flex-col xl:justify-center">
             <Highlight
@@ -104,8 +104,8 @@ const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
           </div>
         </div>
       </div>
-      <div className="bg-white transition-colors dark:bg-primary-800">
-        <div className="z-50 mx-auto max-w-3xl bg-white px-4 pt-4 transition-colors dark:bg-primary-800">
+      <div className="bg-white transition-colors dark:bg-neutral-700">
+        <div className="z-50 mx-auto max-w-3xl bg-white px-4 pt-4 transition-colors dark:bg-neutral-700">
           <InfoBox className="mt-2">
             <p className="text-sm leading-relaxed">
               What you are about to read is a description of the project, to
@@ -115,7 +115,7 @@ const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
             </p>
           </InfoBox>
           <div className="xl:hidden">{links}</div>
-          <p className="mt-4 text-lg leading-relaxed text-gray-600 dark:text-gray-400 xl:hidden">
+          <p className="mt-4 text-lg leading-relaxed text-gray-600 dark:text-gray-300 xl:hidden">
             {project.intro}
           </p>
           <article

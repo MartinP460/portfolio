@@ -1,9 +1,4 @@
-import {
-  AdjustmentsIcon,
-  UserIcon,
-  PuzzleIcon,
-  MailIcon
-} from '@heroicons/react/outline'
+import { UserIcon, HammerIcon, ClipboardIcon, MailIcon } from './icons'
 import useActiveSection from '../hooks/useActiveSection'
 
 const SideNavigation = () => {
@@ -30,7 +25,7 @@ const SideNavigation = () => {
             title="projects"
             className={active === 'projects' ? 'text-primary-200' : ''}
           >
-            <AdjustmentsIcon className={iconStyles} />
+            <HammerIcon className={iconStyles} />
           </a>
         </li>
         <li>
@@ -39,7 +34,7 @@ const SideNavigation = () => {
             title="skillset"
             className={active === 'skillset' ? 'text-primary-200' : ''}
           >
-            <PuzzleIcon className={iconStyles} />
+            <ClipboardIcon className={iconStyles} />
           </a>
         </li>
         <li>

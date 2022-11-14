@@ -1,6 +1,9 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import { BookmarkIcon, ExternalLinkIcon } from '@heroicons/react/outline'
-import { GithubIcon } from '../../components/icons'
+import {
+  GithubIcon,
+  BookmarkIcon,
+  ExternalLinkIcon
+} from '../../components/icons'
 import { Project as ProjectType } from '../../types/project'
 import {
   getProjectsSlugs,
@@ -31,7 +34,7 @@ const Project: NextPage<ProjectProps> = ({ project, slugs }) => {
   const sidebarLinks = slugs.map((slug) => ({
     title: slug,
     href: slug === project.slug ? '#' : `/projects/${slug}`,
-    icon: <BookmarkIcon />
+    icon: <BookmarkIcon className="h-7" />
   }))
 
   const links = (

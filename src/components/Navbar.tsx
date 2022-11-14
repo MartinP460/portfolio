@@ -1,5 +1,5 @@
 import { ReactNode, useState } from 'react'
-import { ArrowLeftIcon } from '@heroicons/react/outline'
+import { ArrowLeftIcon } from './icons'
 import clsx from 'clsx'
 import Link from 'next/link'
 import ResumeButton from './ResumeButton'
@@ -46,7 +46,7 @@ const Navbar = ({ sidebarLinks, projectPage }: NavbarProps) => {
           {projectPage && (
             <Link href="/">
               <a className="hidden lg:block">
-                <ArrowLeftIcon className="w-10 text-primary-800 transition hover:-translate-x-1 hover:text-primary-200 dark:text-white dark:hover:text-primary-200" />
+                <ArrowLeftIcon className="w-14 text-primary-800 transition hover:-translate-x-1 hover:text-primary-200 dark:text-white dark:hover:text-primary-200" />
               </a>
             </Link>
           )}

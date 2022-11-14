@@ -1,4 +1,4 @@
-import { SunIcon, MoonIcon } from '@heroicons/react/outline'
+import { SunIcon, MoonIcon } from './icons'
 import clsx from 'clsx'
 import useDarkMode from '../hooks/useDarkMode'
 

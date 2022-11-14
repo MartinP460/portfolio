@@ -1,5 +1,5 @@
 import { ReactNode, useEffect } from 'react'
-import { HomeIcon } from '@heroicons/react/outline'
+import { HomeIcon } from './icons'
 import clsx from 'clsx'
 import Link from 'next/link'
 import DarkModeToggle from './DarkModeToggle'

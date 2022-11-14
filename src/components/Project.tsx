@@ -1,6 +1,5 @@
 import { Thumbnail } from '../types/project'
-import { ExternalLinkIcon } from '@heroicons/react/outline'
-import { GithubIcon } from './icons'
+import { ExternalLinkIcon, GithubIcon } from './icons'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import clsx from 'clsx'

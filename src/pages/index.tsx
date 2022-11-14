@@ -1,10 +1,10 @@
 import { NextPage } from 'next'
 import {
-  AdjustmentsIcon,
   UserIcon,
-  PuzzleIcon,
+  HammerIcon,
+  ClipboardIcon,
   MailIcon
-} from '@heroicons/react/outline'
+} from '../components/icons'
 import { getAllProjectsData } from '../services/projectService'
 import { Project } from '../types/project'
 import useSmoothScroll from '../hooks/useSmoothScroll'
@@ -30,12 +30,12 @@ const sidebarLinks = [
   {
     title: 'projects',
     href: '#projects',
-    icon: <PuzzleIcon />
+    icon: <HammerIcon />
   },
   {
     title: 'skillset',
     href: '#skillset',
-    icon: <AdjustmentsIcon />
+    icon: <ClipboardIcon />
   },
   {
     title: 'contact',

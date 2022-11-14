@@ -29,8 +29,8 @@ const Skillset = () => {
               {skill.items.map((item) => (
                 <li
                   key={item}
-                  data-icon="&#9660;"
-                  className="before:absolute before:block before:-rotate-90 before:text-sm before:text-primary-800 before:content-[attr(data-icon)] dark:before:text-gray-400"
+                  data-icon="&bull;"
+                  className="before:absolute before:block before:text-sm before:text-primary-800 before:content-[attr(data-icon)] dark:before:text-gray-400"
                 >
                   <p className="pl-6 capitalize dark:text-gray-300">{item}</p>
                 </li>

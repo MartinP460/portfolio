@@ -206,7 +206,7 @@ I omitted Typescript and parts of the code for brevity but you can find the fini
 
 ### The future of the library
 
-I will continue to maintain the library by fixing bugs and adding new features. I've already identified a bug that I will fix in the next release. I also want to add `onMouseEnter` and `onMouseLeave` props to the component since this will give the developer more flexibility. However, this is a relatively small library so it's limited how many improvements can be made to it.
+I will continue to maintain the library by fixing bugs and adding new features. I've already identified a bug that I will fix in the next release. I also want to add `onMouseEnter` and `onMouseLeave` props to the component since this will give the developer more flexibility. However, this is a relatively small library so it's limited how many improvements can be made to it. (Update: `onMouseEnter` and `onMouseLeave` props were added in v1.1).
 
 ### Learnings I can use in the future
 

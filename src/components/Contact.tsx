@@ -16,10 +16,10 @@ const Contact = () => {
       </div>
       <div className="mt-12">
         <p className="max-w-lg text-gray-600 dark:text-gray-300">
-          I&apos;m looking for new opportunities and people to connect with so
-          you&apos;re more than welcome to contact me! I&apos;m also active on a
-          few different social media platforms, and you can find links to those
-          profiles below.
+          I&apos;m not currently looking for new opportunities but you&apos;re
+          more than welcome to reach out to me for a chat! I&apos;m also active
+          on a few different social media platforms, and you can find links to
+          those profiles below.
         </p>
         <div className="mt-10 flex flex-col justify-center gap-y-6 sm:flex-row sm:items-center sm:justify-start">
           <div className="flex gap-4">

@@ -24,9 +24,9 @@ const Header = () => {
         I&apos;m a passionate web developer from{' '}
         <Highlight text="Copenhagen, Denmark" /> focusing on frontend
         development. I enjoy working in React and Next.js to build applications
-        that solve real problems. I&apos;m currently looking for new
-        opportunities and I&apos;m always down for a chat, so feel free to
-        contact me.
+        that solve real problems. I&apos;m not currently looking for new
+        opportunities but I&apos;m always down for a chat, so feel free to reach
+        out.
       </p>
       <Button className="mt-8" onClick={() => router.push('#projects')}>
         Projects
